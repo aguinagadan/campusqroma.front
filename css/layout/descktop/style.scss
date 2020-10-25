@@ -1,0 +1,204 @@
+:root{
+    --width-logo: 170px;
+}
+header{
+    display: flex;
+    width: 100%;
+    padding: 0 6.5vw;
+    align-items: center;
+    height: 70px;
+    // z-index: 10;
+    .logo{
+        width: var(--width-logo);
+        padding: 10px;
+        margin: 0 15px;
+    }
+    .options{
+        width: calc(100% - var(--width-logo));
+        display: flex;
+        justify-content: space-between;
+        .menu, .actions{
+            display: flex;
+            .item{
+                text-decoration: none;
+                font-size: .8em;
+            }
+        }
+        .menu{
+            margin-left: 20px;
+            .item{
+                text-align: center;
+                // width: 150px;
+                padding: 0 15px;
+            }
+        }
+        .menu, .actions{
+            .item{
+                img{
+                    height: 20px;
+                    margin-right: 10px;
+                }
+            }
+        }
+    }
+}
+.baner{
+    width: 100%;
+    height: 455px;
+    overflow: hidden;
+    position: relative;
+    z-index: -1;
+    .item{
+        position: relative;
+        width: 100%;
+        height: 100%;
+        img{
+            width: 100%;
+        }
+        .content{
+            position: absolute;
+            left: 14.5vw;
+            bottom: 85px;
+            // left: 0;
+            .title{
+                margin-bottom: 20px;
+                padding: 25px 35px;
+                font-size: 30px;
+                width: 550px;
+            }
+            .btn{
+                transform: scale(1.25);
+                padding: 6.5px 40px;
+                transform-origin: bottom left;
+            }
+        }
+    }
+    .after,.before{
+        background-image: url('../../../img/icons/arrow.svg');
+        background-repeat: no-repeat;
+        height: 45px;
+        width: 45px;
+        position: absolute;
+        top: calc(50% - 42px);
+        cursor: pointer;
+        transition: all .3s;
+        &:hover{
+            opacity: .8;
+            transform: scale(.9);
+        }
+    }
+    .after{
+        right: 22px;
+        transform: rotate(180deg);
+    }
+    .before{
+        left: 22px;
+        z-index: 1;
+    }
+}
+.access{
+    text-align: center;
+    width: 100%;
+    h2{
+        padding: 25px 0 25px 60px;
+        font-size: 2.5em;
+    }
+    .widget01{
+        padding: 37px;
+        background-color: var(--secondary-color);
+    }
+}
+.container-testimonials{
+    margin: 0 auto;
+    padding: 45px 45px 15px 45px;
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    h3{
+        font-size: 18px;
+        margin-bottom: 35px;
+    }
+    .after,.before{
+        background-image: url('../../../img/icons/play.svg');
+        height: 32px;
+        width: 32px;
+        position: absolute;
+        top: calc(50% + 16px);
+        cursor: pointer;
+        transition: all .3s;
+        &:hover{
+            opacity: .8;
+            transform: scale(.9);
+        }
+    }
+    .after{
+        left: 0;
+        transform: rotate(180deg);
+    }
+    .before{
+        right: 0;
+    }
+}
+.marcas{
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    .item{
+        height: 108px;
+        // width: 150px;
+        img{
+            // width: 80%;
+            height: 100%;
+        }
+    }
+}
+footer{
+    .w70{
+        display: flex;
+        justify-content: space-between;
+        padding: 53px 45px 45px 45px;
+        margin: 0 auto;
+        h3{
+            font-size: 15px;
+            margin-bottom: 18px;
+        }
+        ul{
+            margin-left: 25px;
+            li{
+                font-size: 13px;
+                a{
+                    text-decoration: none;
+                }
+            }
+        }
+        .menus{
+            display: flex;
+        }
+        .redes{
+            margin-left: 25px;
+            .list{
+                display: flex;
+                margin-left: 5px;
+                padding-top: 3px;
+                .item{
+                    background-color: var(--info-color);
+                    height: 27px;
+                    width: 27px;
+                    border-radius: 50%;
+                    display: flex;
+                    justify-content: center;
+                    align-items: center;
+                    margin-right: 8px;
+                    img{
+                        height: 45%;
+                    }
+                }
+            }
+        }
+    }
+    .copy{
+        text-align: center;
+        font-size: 12px;
+        padding: 18px;
+    }
+}

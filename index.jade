@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        link(rel="stylesheet",href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css",integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm",crossorigin="anonymous")
+        link(rel="stylesheet", href="css/_base.css")
+    body
+        //- .mokup
+            img(src="./mokup/QROMA-01-Home.jpg", alt="", srcset="" width="100%")
+        #app
+            header
+                .logo
+                    img(src="./img/logo-qroma.svg", alt="logo qroma")
+                .options
+                    .menu
+                        a(href="#").item.active HOME
+                        a(href="#").item CATÁLOGO DE CURSOS
+                        a(href="#").item MIS CURSOS
+                    .actions
+                        a(href="#").item.flex
+                            img(src="./img/icons/user.svg", alt="")
+                            span LOGIN
+            .baner
+                .before
+                .item
+                    img(src="./img/baner/background01.jpg", alt="", srcset="")
+                    .content
+                        .title.bg-info.text-white Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        .btn.btn-success Acceder
+                .after
+            .access
+                h2
+                    span.text-primary !Pinta 
+                    span.text-info tu mejor versión!
+                .widget01
+                    .item.bg-primary
+                        img.icon(src="./img/icons/quars.svg", alt="")
+                        .text
+                            .title MIS CURSOS
+                            .subtitle Acumula puntos
+                    .item.bg-danger
+                        img.icon(src="./img/icons/screen.svg", alt="")
+                        .text
+                            .title MIS CURSOS
+                            .subtitle Acumula puntos
+            .container-testimonials.w70
+                h2
+                    span.text-info Qué dicen 
+                    span.text-primary nuestros alumnos
+                h3 Nuestros alumnos respaldan nuestra calidad de educativa
+                .testimonials
+                    .before
+                    .card01
+                        .item
+                            .content
+                                h2.text-success TESTIMONIO 01
+                                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor tempore officiis minus magnam amet. Cum minima nostrum beatae doloribus veniam corrupti unde. Pariatur placeat totam tenetur, cum facere iusto deserunt!
+                            .profile.b-success
+                                img(src="./img/profile01.jpg", alt="")
+                        .item
+                            .content
+                                h2.text-info TESTIMONIO 02
+                                p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor tempore officiis minus magnam amet. Cum minima nostrum beatae doloribus veniam corrupti unde. Pariatur placeat totam tenetur, cum facere iusto deserunt!
+                            .profile.b-info
+                                img(src="./img/profile02.jpg", alt="")
+                    .after
+            .marcas.w80
+                .item
+                    img(src="./img/logos/american-colors.png", alt="")
+                .item
+                    img(src="./img/logos/cpp.png", alt="")
+                .item
+                    img(src="./img/logos/jet.png", alt="")
+                .item
+                    img(src="./img/logos/tekno.png", alt="")
+                .item
+                    img(src="./img/logos/vencedor.png", alt="")
+                .item
+                    img(src="./img/logos/fast.png", alt="")
+            footer
+                .w70
+                    .menus.w75
+                        .site-map.w33
+                            h3 MAPA DEL AULA VIRTUAL
+                            ul
+                                li.active
+                                    a(href="#") HOME
+                                li
+                                    a(href="#") CATÁLOGO
+                                li
+                                    a(href="#") QROMOTECA
+                                li
+                                    a(href="#") TIENDA
+                        .site-map.w33
+                            h3 MI PERFIL
+                            ul
+                                li
+                                    a(href="#") MI DASHBOARD
+                                li
+                                    a(href="#") MIS CURSOS
+                                li
+                                    a(href="#") ¿AYUDA?
+                    .redes.w25
+                        h3 SIGUENOS EN LAS REDES
+                        .list
+                            .item
+                                img(src="./img/icons/facebook.svg", alt="")
+                            .item
+                                img(src="./img/icons/youtube.svg", alt="")
+                            .item
+                                img(src="./img/icons/linkeding.svg", alt="")
+                .copy QROMA 2020 © TODOS LOS DERECOS RESERVADOS  
+        script(src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js")
+        script(src="js/main.js")

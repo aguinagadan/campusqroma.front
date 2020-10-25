@@ -1,0 +1,115 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+.btn{
+    border: none;
+    transition: all .3s;
+    color: white;
+    &:hover{
+        color: rgba(white, .8);
+    }
+}
+.btn-info{
+    background-color: var(--info-color);
+    &:hover{
+        background-color: var(--info-color-darken);
+    }
+}
+.btn-success{
+    background-color: var(--success-color);
+    &:hover{
+        background-color: var(--success-color-darken);
+    }
+}
+.btn-warning{
+    background-color: var(--warning-color);
+    &:hover{
+        background-color: var(--warning-color-darken);
+    }
+}
+.btn-danger{
+    background-color: var(--danger-color);
+    &:hover{
+        background-color: var(--danger-color-darken);
+    }
+}
+.bg-info{
+    background-color: var(--info-color)!important;
+}
+.bg-success{
+    background-color: var(--success-color)!important;
+}
+.bg-warning{
+    background-color: var(--warning-color)!important;
+}
+.bg-danger{
+    background-color: var(--danger-color)!important;
+}
+.bg-primary{
+    background-color: var(--primary-color)!important;
+}
+.bg-secondary{
+    background-color: var(--secondary-color)!important;
+}
+
+.text-info{
+    color: var(--info-color)!important;
+}
+.text-success{
+    color: var(--success-color)!important;
+}
+.text-warning{
+    color: var(--warning-color)!important;
+}
+.text-danger{
+    color: var(--danger-color)!important;
+}
+.text-primary{
+    color: var(--primary-color)!important;
+}
+.text-secondary{
+    color: var(--secondary-color)!important;
+}
+
+.b-info{
+    border: 5px solid var(--info-color)!important;
+}
+.b-success{
+    border: 5px solid var(--success-color)!important;
+}
+.b-warning{
+    border: 5px solid var(--warning-color)!important;
+}
+.b-danger{
+    border: 5px solid var(--danger-color)!important;
+}
+.b-primary{
+    border: 5px solid var(--primary-color)!important;
+}
+.b-secondary{
+    border: 5px solid var(--secondary-color)!important;
+}
+.flex{
+    display: flex;
+}
+
+.w25{
+    width: 25%;
+}
+.w33{
+    width: 33%;
+}
+.w50{
+    width: 50%;
+}
+.w70{
+    width: 70%;
+}
+.w75{
+    width: 75%;
+}
+.w80{
+    width: 84%;
+}

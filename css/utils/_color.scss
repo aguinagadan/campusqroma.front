@@ -1,0 +1,42 @@
+body{
+    background-color: #fdfdfd;
+    color: #535353;
+}
+a{
+    color: #535353;
+}
+header{
+    background: white;
+    box-shadow: var(--shadow-1);
+    .menu, .actions{
+        .item{
+            color: var(--info-color);
+            &.active{
+                color: var(--primary-color);
+            }
+        }
+    }
+}
+.marcas{
+    background: white;
+}
+footer{
+    color: #a1aeb7;
+    ul{
+        li{
+            color: #a1aeb7;
+            a{
+                color: #a1aeb7;
+            }
+            &.active{
+                color: var(--info-color);
+                a{
+                    color: var(--info-color);
+                }
+            }
+        }
+    }
+    .copy{
+        box-shadow: 0 0 2px 0 rgba(#000000, .5);
+    }
+}
