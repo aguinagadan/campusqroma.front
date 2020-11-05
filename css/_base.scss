@@ -1,3 +1,5 @@
+// fonts
+@import '../font/stylesheet.css';
 // utils
 @import 'utils/variables';
 @import 'utils/color';
@@ -5,7 +7,7 @@
 @import 'utils/changeBase';
 @import 'utils/widgets';
 @import 'utils/cards';
-
+@import 'utils/progreesbar';
 // layout
 @import 'layout/descktop/style';
 @import 'utils/mokup';

@@ -2,6 +2,25 @@
     padding: 0;
     margin: 0;
     box-sizing: border-box;
+    font-family: 'Gotham';
+    font-weight: normal;
+    font-style: normal;
+}
+h1,h2,h3,h4,h5,h6{
+    font-weight: normal;
+}
+.pacifig, .pacifig *{
+    font-family: 'Pacifico';
+    font-weight: normal;
+    font-style: normal;
+}
+.gotham-medium, .gotham-medium *{
+    font-family: 'Gotham';
+    font-weight: 500;
+    font-style: normal;
+}
+.icon-60{
+    height: 60px;
 }
 .btn{
     border: none;
@@ -72,6 +91,9 @@
 .text-secondary{
     color: var(--secondary-color)!important;
 }
+.text-tercery{
+    color: var(--tercery-color)!important;
+}
 
 .b-info{
     border: 5px solid var(--info-color)!important;
@@ -112,4 +134,60 @@
 }
 .w80{
     width: 84%;
+}
+.px45{
+    padding: 0 45px 0 45px;
+}
+.p45{
+    padding: 45px;
+}
+.p60-50{
+    padding: 60px 50px;
+}
+.m0auto{
+    margin: 0 auto;
+}
+.category-title{
+    h5{
+        color: var(--tercery-color);
+    }
+}
+.radius-50{
+    border-radius: 50%;
+    overflow: hidden;
+}
+.radius-50X{
+    border-radius: 50%;
+}
+.border-7{
+    border: 7px solid white
+}
+.relative{
+    position: relative;
+}
+
+*::-webkit-scrollbar {
+    -webkit-appearance: none;
+}
+
+*::-webkit-scrollbar:vertical {
+    width: 8px;
+}
+
+*::-webkit-scrollbar-button:increment,*::-webkit-scrollbar-button {
+    display: none;
+} 
+
+*::-webkit-scrollbar:horizontal {
+    height: 10px;
+}
+
+*::-webkit-scrollbar-thumb {
+    background-color: var(--info-color);
+    border-radius: 10px;
+    // border: 2px solid #f1f2f3;
+}
+
+*::-webkit-scrollbar-track {
+    border-radius: 10px;  
 }

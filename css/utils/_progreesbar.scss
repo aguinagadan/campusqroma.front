@@ -1,0 +1,68 @@
+.container-progress{
+    height: 80%;
+    width: 80%;
+    text-align: center;
+    display: table-cell;
+    vertical-align: middle;
+    background-color: white;
+    &.danger{
+        .rail{
+            stroke: var(--danger-color);
+        }
+        .center{
+            color: var(--danger-color);
+        }
+    }
+    &.success{
+        .rail{
+            stroke: var(--success-color);
+        }
+        .center{
+            color: var(--success-color);
+        }
+    }
+    .progress{
+        stroke: #e4b32e;
+    }
+
+    .percentage{
+        color: #db1111;
+    }
+}
+
+.gauge-container{
+    display: inline-block;
+    position: relative;
+    width: 100%;
+    .gauge{
+        position: relative;
+        display: block;
+    }
+    .gauge{
+        circle{
+            stroke-width: 15;
+        }
+        .rail{
+            fill: white;
+        }
+    }
+    .center{
+        display: inline-block;
+        position: absolute;
+        top: 36%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        font-weight: 300;
+
+        &.percentage{
+            font-size: 2vw;
+        }
+        .percentSymbol{
+            font-size: .3em;
+        }
+
+        .value{
+            font-size: .6em;
+        }
+    }
+}

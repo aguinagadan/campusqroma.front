@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        link(rel="stylesheet",href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css",integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm",crossorigin="anonymous")
+        link(rel="stylesheet", href="css/_base.css")
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        
+    body
+        #app
+            header
+                .logo
+                    img(src="./img/logo-qroma.svg", alt="logo qroma")
+                .options.gotham-medium
+                    .menu
+                        a(href="#").item HOME
+                        a(href="#").item CATÁLOGO DE CURSOS
+                        a(href="#").item MIS CURSOS
+                    .actions
+                        a(href="#").item.flex
+                            img(src="./img/icons/user.svg", alt="")
+                            span LOGIN
+            .profile.bg-d-3
+                .w70.m0auto.p60-50.flex
+                    .data
+                        h2.text-white.mt-2 CANJE DE PUNTOS
+                        h5.text-white Tenemos más de 500 productos para ti
+            .mis-cursos.w70.m0auto.p60-50
+                
+            .p60-50.bg-secondary.products
+                .w70.m0auto.title
+                    form.w-50
+                        .form-group
+                            label.type-2 Filtrar por:
+                            select.text-info
+                                option Todos los productos
+                .body.w70.m0auto.flex.mt-3.tabs
+                    .body
+                        - var n = 0;
+                        while n < 8
+                            .item
+                                .img
+                                    img(src="./img/cursos.jpg", alt="", srcset="")
+                                .contry
+                                    img.contry-flag(src="./img/pais/peru.jpg", alt="", srcset="")
+                                    .contry-name PERÚ
+                                h3.title.gotham-medium Titulo del Primer curso
+                                .footer
+                                    .btn.btn-info ACCEDER
+                                    .progress
+                                        .container-progress.danger
+                                            .gauge-container
+                                                svg.gauge(viewBox="0 0 150 150")
+                                                    circle.progress(r="67", data-target="84", cx="75" cy="75")
+                                                    circle.rail(r="67", data-target="84", cx="75" cy="75")
+                                                span.center.percentage
+                                                    span.value 0
+                                                    span.percentSymbol %
+                            - n++;
+            footer
+                .w70
+                    .menus.w75
+                        .site-map.w33
+                            h3 MAPA DEL AULA VIRTUAL
+                            ul
+                                li
+                                    a(href="#") HOME
+                                li
+                                    a(href="#") CATÁLOGO
+                                li
+                                    a(href="#") QROMOTECA
+                                li.active
+                                    a(href="#") TIENDA
+                        .site-map.w33
+                            h3 MI PERFIL
+                            ul
+                                li
+                                    a(href="#") MI DASHBOARD
+                                li
+                                    a(href="#") MIS CURSOS
+                                li
+                                    a(href="#") ¿AYUDA?
+                    .redes.w25
+                        h3 SIGUENOS EN LAS REDES
+                        .list
+                            .item
+                                img(src="./img/icons/facebook.svg", alt="")
+                            .item
+                                img(src="./img/icons/youtube.svg", alt="")
+                            .item
+                                img(src="./img/icons/linkeding.svg", alt="")
+                .copy QROMA 2020 © TODOS LOS DERECOS RESERVADOS

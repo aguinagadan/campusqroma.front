@@ -1,6 +1,27 @@
 .widget01{
     display: flex;
     justify-content: center;
+    flex-direction: row!important;
+    &.n2{
+        .item{
+            &:last-child{
+                margin-left: 80px;
+            }
+        }
+    }
+    &.n4{
+        .item{
+            margin-left: 10px;
+            &:first-child{
+                margin-left: 0;
+            }
+        }
+    }
+    &.flex-column{
+        .item{
+            flex-direction: column;
+        }
+    }
     .item{
         border-radius: 0 20px 20px 20px;
         padding: 10px 30px;
@@ -10,9 +31,6 @@
         justify-content: start;
         align-items: center;
         height: 105px;
-        &:last-child{
-            margin-left: 80px;
-        }
         .icon{
             height: 35px;
         }
@@ -22,6 +40,9 @@
             .subtitle{
                 font-size: .75em;
             }
+        }
+        .subtitle{
+            color: rgba(#ffffff, .5);
         }
     }
 }

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        link(rel="stylesheet",href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css",integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm",crossorigin="anonymous")
+        link(rel="stylesheet", href="css/_base.css")
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        
+    body
+        #app
+            header
+                .logo
+                    img(src="./img/logo-qroma.svg", alt="logo qroma")
+                .options.gotham-medium
+                    .menu
+                        a(href="#").item HOME
+                        a(href="#").item CATÁLOGO DE CURSOS
+                        a(href="#").item MIS CURSOS
+                    .actions
+                        a(href="#").item.flex
+                            img(src="./img/icons/user.svg", alt="")
+                            span LOGIN
+            .profile.bg-d-2
+                .w70.m0auto.p60-50.flex
+                    .photo.radius-50.border-7.mr-4
+                        img(src="./img/perfil.jpg", alt="", srcset="")
+                    .data
+                        span.text-white Activo desde el 22 de Septiembre, 2020
+                        h2.text-white.mt-2 JOHN DOE ADMIN
+                        .point
+                            .content.bg-white
+                                .points.radius-50
+                                    img(src="./img/icons/points.svg", alt="")
+                                span.text-primary.gotham-medium 123 PUNTOS
+            .mis-cursos.w70.m0auto.p60-50
+                h2.mb-4
+                    span.text-info.gotham-medium Mis cursos  
+                    span.text-success.pacifig pendientes
+                .arrow-left
+                    img(src="./img/icons/arrow-success.svg", alt="", srcset="")
+                .tabs
+                    .body
+                        - var n = 0;
+                        while n < 4
+                            .item
+                                .img
+                                    img(src="./img/cursos.jpg", alt="", srcset="")
+                                .contry
+                                    img.contry-flag(src="./img/pais/peru.jpg", alt="", srcset="")
+                                    .contry-name PERÚ
+                                h3.title.gotham-medium Titulo del Primer curso
+                                .footer
+                                    .btn.btn-info ACCEDER
+                                    .progress
+                                        .container-progress.danger
+                                            .gauge-container
+                                                svg.gauge(viewBox="0 0 150 150")
+                                                    circle.progress(r="67", data-target="84", cx="75" cy="75")
+                                                    circle.rail(r="67", data-target="84", cx="75" cy="75")
+                                                span.center.percentage
+                                                    span.value 0
+                                                    span.percentSymbol %
+
+                            - n++;
+                .arrow-right
+                    img(src="./img/icons/arrow-success.svg", alt="", srcset="")
+                .actions
+                    .item.active
+                    .item
+                    .item
+                    .item
+            .p60-50.bg-secondary.progress-bar-general
+                .w70.m0auto.pb-5.relative
+                    .arrow-left
+                        img(src="./img/icons/arrow-success.svg", alt="", srcset="")
+                    .bar
+                        .color
+                        .level
+                            .points.radius-50X.bg-info
+                                img(src="./img/icons/points.svg", alt="")
+                                span JUNIOR
+                        .level.active
+                            .points.radius-50X.bg-primary
+                                img(src="./img/icons/points.svg", alt="")
+                                span INTERMEDIO
+                        .level
+                            .points.radius-50X.bg-danger
+                                img(src="./img/icons/points.svg", alt="")
+                                span AVANZADO
+                    .arrow-right
+                        img(src="./img/icons/arrow-success.svg", alt="", srcset="")
+                .body.w70.m0auto.flex.mt-5
+                    .ranking
+                        .header.bg-info.text-white Ranking por áreas
+                        .content
+                            table
+                                - var n = 0;
+                                while n < 50
+                                    tr
+                                        td 1
+                                        td Comercial
+                                        td
+                                            img(src="./img/icons/as.svg", alt="", srcset="")
+                                        td 158 puntos
+                                    - n++;
+                    .progreso
+                        .header.bg-info.text-white Mi progreso
+                        .content.bg-white
+                            .flex
+                                span 254 cursos en el portafolio
+                                .progress-bar-h
+                                    .active.bg-success
+                                    span.text-white 250 cursos terminados
+                            .valoration
+                                .item
+                                    span.num 15
+                                    span.bg-secondary Premios Canjeados
+                                .item
+                                    span.num 12
+                                    span.bg-secondary Valoraciones
+                                .item
+                                    span.num 6
+                                    span.bg-secondary Aprendizajes conpartidos
+                                .item
+                                    span.num 0
+                                    span.bg-secondary Discusiones
+            .mis-cursos-2.w70.m0auto.p60-50
+                .header.flex
+                    h2.mb-4
+                        span.text-info.gotham-medium Todos 
+                        span.text-success.pacifig mis cursos
+                    .options
+                        form(action="")
+                            .form-group
+                                input(type="text", id="text-search")
+                                label(for="text-search") ¿Qué curso estas buscado?
+                                button
+                                    img(src="./img/icons/search-2.svg", alt="", srcset="")
+                        form(action="")
+                            .form-group
+                                select
+                                    option Filtrar cursos por categoria
+                                //- label Filtrar cursos por categoria
+                .body
+                    - var n = 0;
+                    while n < 10
+                        .item
+                            .left
+                                .photo
+                                    .img(style="background:url(./img/cursos.jpg)")
+                                .content
+                                    span Nombre completo del primer curso de prueba con dos filas de text para nombres largos
+                                    a.text-success(href="#") ACCEDER >
+                            .right
+                                .calendar
+                                    img(src="./img/icons/calendar.svg", alt="", srcset="")
+                                    .text
+                                        span Terminar el
+                                        br
+                                        span 15 de Abril, 2020
+                                .progress
+                        - n++;
+            footer.bg-secondary
+                .w70
+                    .menus.w75
+                        .site-map.w33
+                            h3 MAPA DEL AULA VIRTUAL
+                            ul
+                                li
+                                    a(href="#") HOME
+                                li
+                                    a(href="#") CATÁLOGO
+                                li
+                                    a(href="#") QROMOTECA
+                                li
+                                    a(href="#") TIENDA
+                        .site-map.w33
+                            h3 MI PERFIL
+                            ul
+                                li.active
+                                    a(href="#") MI DASHBOARD
+                                li
+                                    a(href="#") MIS CURSOS
+                                li
+                                    a(href="#") ¿AYUDA?
+                    .redes.w25
+                        h3 SIGUENOS EN LAS REDES
+                        .list
+                            .item
+                                img(src="./img/icons/facebook.svg", alt="")
+                            .item
+                                img(src="./img/icons/youtube.svg", alt="")
+                            .item
+                                img(src="./img/icons/linkeding.svg", alt="")
+                .copy QROMA 2020 © TODOS LOS DERECOS RESERVADOS
