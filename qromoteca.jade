@@ -22,54 +22,36 @@ html(lang="en")
                         a(href="#").item.flex
                             img(src="./img/icons/user.svg", alt="")
                             span LOGIN
-            .profile.bg-d-3
-                .w70.m0auto.p60-50.flex
-                    .data
-                        h2.text-white.mt-2 CANJE DE PUNTOS
-                        h5.text-white Tenemos más de 500 productos para ti
-            .mis-cursos.w70.m0auto.p60-50
-                .widget-2
-                    .item
-                        .icon.bg-info.radius-50
-                            img(src="./img/icons/navega.svg", alt="")
-                        h3.text-info 1. NAVEGA
-                        span Tenemos más de 500 productos para ti.
-                    .item
-                        .icon.bg-primary.radius-50
-                            img(src="./img/icons/canjea.svg", alt="")
-                        h3.text-primary 2. CANJEA
-                        span Usa tus puntos para canjear.
-                    .item
-                        .icon.bg-warning.radius-50
-                            img(src="./img/icons/coordinar.svg", alt="")
-                        h3.text-warning 3. COORDINA
-                        span Recibiras un correo con los siguientes pasos.
-                    .item
-                        .icon.bg-orange.radius-50
-                            img(src="./img/icons/hand.svg", alt="")
-                        h3.text-orange 4. RECIBE
-                        span Recibe tu producto y disfrútalo.
-            .p60-50.bg-secondary.products
-                .w70.m0auto.title
-                    form.w-50
+            .search.bg-d-4
+                .w70.m0auto.p60-50
+                    h2.text-white QROMOTECA
+                    form(action="")
                         .form-group
-                            label.type-2 Filtrar por:
-                            select.text-info
-                                option Todos los productos
-                .body.w70.m0auto.flex.mt-3.tabs
-                    .body
-                        - var n = 0;
-                        while n < 8
-                            .item
-                                .img
-                                    .product(style="background:url(./img/product.jpg)", alt="", srcset="")
-                                .content
-                                    span.gotham Primer Producto
-                                    br
-                                    span.gotham-medium 40 puntos
-                                .footer
-                                    a.text-primary(href="#") Canjear >
-                            - n++;
+                            input(type="text", id="text-search")
+                            label(for="text-search") ¿Qué aprendizaje estás buscado?
+                            button
+                                img(src="./img/icons/search.svg", alt="", srcset="")
+            .p60-50.bg-secondary.desarrollo-personal
+                .category-title.w70.m0auto.p50-50.pb-3
+                    h2.mb-1
+                        span.text-info.gotham-medium 35 Aprendizajes 
+                        span.text-success.pacifig compartidos contigo
+                    h5 Selecciona una categoría y encuentra los aprendizajes disponibles
+                .body
+                    - var n = 0;
+                    while n < 12
+                        .item
+                            .img
+                                img(src="./img/desarrollo personal.jpg")
+                                .icons
+                                    img.like(src="./img/icons/like-2.svg")
+                                    img(src="./img/icons/play.svg")
+                            h3.title.text-info lorem ipsum dolor sit amet.
+                            .footer
+                                .like
+                                    img(src="./img/icons/like.svg" height="100%")
+                                    span.text-tercery 145 valoraciones
+                        -n++;
             footer
                 .w70
                     .menus.w75
@@ -80,9 +62,9 @@ html(lang="en")
                                     a(href="#") HOME
                                 li
                                     a(href="#") CATÁLOGO
-                                li
-                                    a(href="#") QROMOTECA
                                 li.active
+                                    a(href="#") QROMOTECA
+                                li
                                     a(href="#") TIENDA
                         .site-map.w33
                             h3 MI PERFIL

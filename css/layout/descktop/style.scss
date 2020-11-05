@@ -389,6 +389,7 @@ footer{
     }
 }
 .profile{
+    position: relative;
     .photo{
         height: 110px;
         width: 110px;
@@ -411,6 +412,26 @@ footer{
                     height: 100%;
                     transform: scale(1.05);
                 }
+            }
+        }
+    }
+    .search-form{
+        position: absolute;
+        bottom: -30px;
+        left: 50%;
+        width: 30%;
+        transform: translateX(-50%);
+        label{
+            color: var(--info-color);
+            display: none;
+        }
+        input{
+            border: 1px solid var(--info-color);
+            background: white;
+            color: var(--info-color);
+            ::placeholder {
+                color: var(--info-color)!important;
+                opacity: 1;
             }
         }
     }
@@ -699,6 +720,35 @@ footer{
                 }
             }
         }
+        &.tabs-2{
+            background: var(--secondary-color);
+            margin-bottom: 30px;
+            border-bottom: 4px solid var(--success-color);
+            .item{
+                cursor: pointer;
+                display: flex;
+                background: transparent;
+                justify-content: center;
+                width: 33%;
+                padding: 5px 0;
+                &.active{
+                    background: var(--success-color);
+                    .title{
+                        color: white;
+                    }
+                }
+                .icon{
+                    height: 20px;
+                    width: 25px;
+                    background-repeat: no-repeat!important;
+                    background-position: center right!important;
+                    margin-right: 10px;
+                }
+                .title{
+                    color: var(--info-color);
+                }
+            }
+        }
     }
     .body{
         .item{
@@ -758,9 +808,71 @@ footer{
         }
     }
 }
+.widget-2{
+    display: flex;
+    justify-content: space-between;
+    .item{
+        text-align: center;
+        .icon{
+            height: 120px;
+            width: 120px;
+            margin: 0 auto;
+            margin-bottom: 20px;
+            img{
+                height: 100%;
+            }
+        }
+        span{
+            text-align: center;
+            display: inline-block;
+            font-size: 10px;
+            max-width: 150px;
+        }
+    }
+}
 .products{
     .title{
         display: flex;
         justify-content: flex-end;
+    }
+    .body{
+        .item{
+            border-radius: 5px;
+            height: 230px;
+            &:hover{
+                .img{
+                    height: 145px;
+                }
+                a{
+                    opacity: 1;
+                }
+            }
+            .img{
+                height: 170px;
+                border-radius: 8px 8px 0 0;
+                overflow: hidden;
+                transition: all .3s;
+                .product{
+                    // background: red;
+                    background-size: cover!important;
+                    height: 100%;
+                    width: 100%;
+                }
+            }
+            h3{
+                margin: 0;
+            }
+            .content{
+                display: block;
+                padding: 10px;
+                line-height: 14px;
+            }
+            a{
+                // position: absolute;
+                font-size: 14px;
+                opacity: 0;
+                transition: all .3s;
+            }
+        }
     }
 }
