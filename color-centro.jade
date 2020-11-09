@@ -1,0 +1,146 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        link(rel="stylesheet",href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css",integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm",crossorigin="anonymous")
+        link(rel="stylesheet", href="css/_base.css")
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery-circle-progress/1.2.2/circle-progress.min.js"></script>
+    body
+        //- .mokup
+            img(src="./mokup/QROMA-02-Cursos-a.jpg", alt="", srcset="" width="100%")
+        #app
+            header
+                .logo
+                    img.w70(src="./img/logo-colorcentro.svg", alt="logo qroma")
+                .options.gotham-medium
+                    .menu.menu-color
+                        a(href="#").item.active HOME
+                        a(href="#").item CATÁLOGO DE CURSOS
+                        a(href="#").item MIS CURSOS
+                    .actions
+                        a(href="#").item.flex
+                            img(src="./img/icons/user-2.svg", alt="")
+                            span.text-tercery LOGIN
+            .search.bg-color
+                .w70.m0auto.p60-50.text-center
+                    h2.text-white CATÁLOGO DE CURSOS
+                    form(action="").m0auto
+                        .form-group
+                            input.bg-white(type="text", id="text-search")
+                            label.text-info(for="text-search") ¿Qué curso estas buscado?
+                            button
+                                img(src="./img/icons/search-2.svg", alt="", srcset="")
+            .category-title.w70.m0auto.p60-50.text-center
+                h2.mb-1.pb-4.line
+                    span.text-tercery 166 Cursos disponibles para ti
+                    //- span.text-success.pacifig disponibles para ti
+                h6 Selecciona una categoría y encuentra los cursos disponibles
+            .category-menu.w70.m0auto.px45
+                .widget01.n4.flex-column.not-radius
+                    .item.bg-primary-o.active.text-center
+                        .img(style="background:url(./img/pintura.jpg)")
+                        h6.text-white Nuestro consumidor
+                        .subtitle 4 CURSOS
+                    .item.bg-primary-o.text-center
+                        .img(style="background:url(./img/pintura-2.jpg)")
+                        h6.text-tercery Tu OnBoarding
+                        .subtitle.text-cuart 2 CURSOS
+                    .item.bg-primary-o.text-center
+                        .img(style="background:url(./img/pintura-2.jpg)")
+                        h6.text-tercery Seguridad
+                        .subtitle.text-cuart 2 CURSOS
+                    .item.bg-primary-o.text-center
+                        .img(style="background:url(./img/pintura-2.jpg)")
+                        h6.text-tercery Cursos de clientes
+                        .subtitle.text-cuart 2 CURSOS
+            .border-primary
+                .w70.m0auto.p60-50.tabs
+                    .header
+                        .before.bg-primary-2.radius-50
+                            img(src="./img/icons/play-2.svg", alt="")
+                        .list.color
+                            a(href="#").item.active TODAS LAS SUBCATEGORIAS
+                            a(href="#").item SUB CATEGORÍA 01
+                            a(href="#").item SUB CATEGORÍA 02
+                            a(href="#").item SUB CATEGORÍA 03
+                        .after.bg-primary-2.radius-50
+                            img(src="./img/icons/play-2.svg", alt="")
+                    .body
+                        - var n = 0;
+                        while n < 4
+                            .item
+                                .img
+                                    img(src="./img/cursos.jpg", alt="", srcset="")
+                                .contry
+                                    img.contry-flag(src="./img/pais/peru.jpg", alt="", srcset="")
+                                    .contry-name PERÚ
+                                h3.title.gotham-medium Titulo del Primer curso
+                                .footer
+                                    .btn.btn-info ACCEDER
+                                    .progress
+                                        .container-progress.danger
+                                            .gauge-container
+                                                svg.gauge(viewBox="0 0 150 150")
+                                                    circle.progress(r="67", data-target="84", cx="75" cy="75")
+                                                    circle.rail(r="67", data-target="84", cx="75" cy="75")
+                                                span.center.percentage
+                                                    span.value 0
+                                                    span.percentSymbol %
+
+                            - n++;
+            .category-menu.w70.m0auto.px45.mt-4
+                .widget01.n4.flex-column.not-radius
+                    .item.bg-primary-o.text-center
+                        .img(style="background:url(./img/pintura.jpg)")
+                        h6.text-tercery Nuestro consumidor
+                        .subtitle.text-cuart 4 CURSOS
+                    .item.bg-primary-o.text-center
+                        .img(style="background:url(./img/pintura-2.jpg)")
+                        h6.text-tercery Tu OnBoarding
+                        .subtitle.text-cuart 2 CURSOS
+                    .item.bg-primary-o.text-center
+                        .img(style="background:url(./img/pintura-2.jpg)")
+                        h6.text-tercery Seguridad
+                        .subtitle.text-cuart 2 CURSOS
+                    .item.bg-primary-o.text-center
+                        .img(style="background:url(./img/pintura-2.jpg)")
+                        h6.text-tercery Cursos de clientes
+                        .subtitle.text-cuart 2 CURSOS
+            footer.color
+                .w70
+                    .menus.w75
+                        .site-map.w33
+                            h3 MAPA DEL AULA VIRTUAL
+                            ul
+                                li
+                                    a(href="#") HOME
+                                li
+                                    a(href="#") CATÁLOGO
+                                li.active
+                                    a(href="#") QROMOTECA
+                                li
+                                    a(href="#") TIENDA
+                        .site-map.w33
+                            h3 MI PERFIL
+                            ul
+                                li
+                                    a(href="#") MI DASHBOARD
+                                li
+                                    a(href="#") MIS CURSOS
+                                li
+                                    a(href="#") ¿AYUDA?
+                    .redes.w25
+                        h3 SIGUENOS EN LAS REDES
+                        .list
+                            .item.active
+                                img(src="./img/icons/facebook.svg", alt="")
+                            .item
+                                img(src="./img/icons/youtube.svg", alt="")
+                            .item
+                                img(src="./img/icons/linkeding.svg", alt="")
+                .copy QROMA 2020 © TODOS LOS DERECOS RESERVADOS
+                                
+

@@ -13,35 +13,31 @@ html(lang="en")
             header
                 .logo
                     img.w70(src="./img/logo-colorcentro.svg", alt="logo qroma")
-                .options.gotham-medium.justify-content-end
+                .options.gotham-medium
                     .menu.menu-color
-                        a(href="#").item HOME
-                        a(href="#").item CATÁLOGO
-                        a(href="#").item.active DASHBOARD
-                        a(href="#").item TIENDA
-                        a(href="#").item QROMATECA
+                        a(href="#").item.active HOME
+                        a(href="#").item CATÁLOGO DE CURSOS
+                        a(href="#").item MIS CURSOS
                     .actions
                         a(href="#").item.flex
                             img(src="./img/icons/user-2.svg", alt="")
                             span.text-tercery LOGIN
-            .profile.bg-d-2
+            .profile.bg-color.color
                 .w70.m0auto.p60-50.flex
-                    .photo.radius-50.border-7.mr-4
+                    .photo.radius-50
                         img(src="./img/perfil.jpg", alt="", srcset="")
-                    .data
-                        span.text-white Activo desde el 22 de Septiembre, 2020
-                        h2.text-white.mt-2 JOHN DOE ADMIN
-                        .point
-                            .content.bg-white
-                                .points.radius-50
-                                    img(src="./img/icons/points.svg", alt="")
-                                span.text-primary.gotham-medium 123 PUNTOS
+                    h2.text-white JOHN DOE ADMIN
+                    .point
+                        .content.bg-white
+                            .points.radius-50
+                                img(src="./img/icons/point-a.svg", alt="")
+                            span.text-info-2.gotham-medium 123 PUNTOS
             .mis-cursos.w70.m0auto.p60-50
-                h2.mb-4
-                    span.text-info.gotham-medium Mis cursos  
-                    span.text-success.pacifig pendientes
+                h2.mb-4.text-center.line.pb-4
+                    //- span.text-info.gotham-medium Mis cursos  
+                    span.text-tercery Tus cursos pendientes
                 .arrow-left
-                    img(src="./img/icons/arrow-success.svg", alt="", srcset="")
+                    img(src="./img/icons/arrow-success-2.svg", alt="", srcset="")
                 .tabs
                     .body
                         - var n = 0;
@@ -54,7 +50,7 @@ html(lang="en")
                                     .contry-name PERÚ
                                 h3.title.gotham-medium Titulo del Primer curso
                                 .footer
-                                    .btn.btn-info ACCEDER
+                                    .btn.btn-info-2 ACCEDER
                                     .progress
                                         .container-progress.danger
                                             .gauge-container
@@ -67,35 +63,16 @@ html(lang="en")
 
                             - n++;
                 .arrow-right
-                    img(src="./img/icons/arrow-success.svg", alt="", srcset="")
+                    img(src="./img/icons/arrow-success-2.svg", alt="", srcset="")
                 .actions
                     .item.active
                     .item
                     .item
                     .item
             .p60-50.bg-secondary.progress-bar-general
-                .w70.m0auto.pb-5.relative
-                    .arrow-left
-                        img(src="./img/icons/arrow-success.svg", alt="", srcset="")
-                    .bar
-                        .color
-                        .level
-                            .points.radius-50X.bg-info
-                                img(src="./img/icons/points.svg", alt="")
-                                span JUNIOR
-                        .level.active
-                            .points.radius-50X.bg-primary
-                                img(src="./img/icons/points.svg", alt="")
-                                span INTERMEDIO
-                        .level
-                            .points.radius-50X.bg-danger
-                                img(src="./img/icons/points.svg", alt="")
-                                span AVANZADO
-                    .arrow-right
-                        img(src="./img/icons/arrow-success.svg", alt="", srcset="")
                 .body.w70.m0auto.flex.mt-5
                     .ranking
-                        .header.bg-info.text-white Ranking por áreas
+                        .header.bg-orange.text-white Ranking por áreas
                         .content
                             table
                                 - var n = 0;
@@ -107,13 +84,13 @@ html(lang="en")
                                             img(src="./img/icons/as.svg", alt="", srcset="")
                                         td 158 puntos
                                     - n++;
-                    .progreso
-                        .header.bg-info.text-white Mi progreso
+                    .progreso.color
+                        .header.bg-info-2.text-white Mi progreso
                         .content.bg-white
                             .flex
                                 span 254 cursos en el portafolio
                                 .progress-bar-h
-                                    .active.bg-success
+                                    .active.bg-info-2
                                     span.text-white 250 cursos terminados
                             .valoration
                                 .item
@@ -131,12 +108,12 @@ html(lang="en")
             .mis-cursos-2.w70.m0auto.p60-50
                 .header.flex
                     h2.mb-4
-                        span.text-info.gotham-medium Todos 
-                        span.text-success.pacifig mis cursos
+                        //- span.text-info.gotham-medium Todos 
+                        span.text-tercery.line.pb-4.after-left.after-80 mis cursos
                     .options
                         form(action="")
                             .form-group
-                                input(type="text", id="text-search")
+                                input.text-info.w-260(type="text", id="text-search" placeholder="¿Qué curso estas buscado?")
                                 label(for="text-search") ¿Qué curso estas buscado?
                                 button
                                     img(src="./img/icons/search-2.svg", alt="", srcset="")
@@ -153,26 +130,24 @@ html(lang="en")
                                 .photo
                                     .img(style="background:url(./img/cursos.jpg)")
                                 .content
-                                    span Nombre completo del primer curso de prueba con dos filas de text para nombres largos
-                                    a.text-success(href="#") ACCEDER >
+                                    span.bold Nombre completo del primer curso de prueba
+                                    .calendar
+                                        img(src="./img/icons/calendar-2.svg", alt="", srcset="")
+                                        .text
+                                            span Fecha de inicio:
+                                            span Miercoles, 15 de Abril, 2020
                             .right
-                                .calendar
-                                    img(src="./img/icons/calendar.svg", alt="", srcset="")
-                                    .text
-                                        span Terminar el
-                                        br
-                                        span 15 de Abril, 2020
                                 .progress
-                                        .container-progress.danger
-                                            .gauge-container
-                                                svg.gauge(viewBox="0 0 150 150")
-                                                    circle.progress(r="67", data-target="84", cx="75" cy="75")
-                                                    circle.rail(r="67", data-target="84", cx="75" cy="75")
-                                                span.center.percentage
-                                                    span.value 0
-                                                    span.percentSymbol %
+                                    .container-progress.danger
+                                        .gauge-container
+                                            svg.gauge(viewBox="0 0 150 150")
+                                                circle.progress(r="67", data-target="84", cx="75" cy="75")
+                                                circle.rail(r="67", data-target="84", cx="75" cy="75")
+                                            span.center.percentage
+                                                span.value 0
+                                                span.percentSymbol %
                         - n++;
-            footer.bg-secondary
+            footer.color
                 .w70
                     .menus.w75
                         .site-map.w33
@@ -182,14 +157,14 @@ html(lang="en")
                                     a(href="#") HOME
                                 li
                                     a(href="#") CATÁLOGO
-                                li
+                                li.active
                                     a(href="#") QROMOTECA
                                 li
                                     a(href="#") TIENDA
                         .site-map.w33
                             h3 MI PERFIL
                             ul
-                                li.active
+                                li
                                     a(href="#") MI DASHBOARD
                                 li
                                     a(href="#") MIS CURSOS
@@ -198,7 +173,7 @@ html(lang="en")
                     .redes.w25
                         h3 SIGUENOS EN LAS REDES
                         .list
-                            .item
+                            .item.active
                                 img(src="./img/icons/facebook.svg", alt="")
                             .item
                                 img(src="./img/icons/youtube.svg", alt="")

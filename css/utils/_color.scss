@@ -15,6 +15,24 @@ header{
                 color: var(--primary-color);
             }
         }
+        &.menu-color{
+            .item{
+                color: var(--tercery-color);
+                &.active{
+                    color: var(--primary-color-2);
+                    position: relative;
+                    &:after{
+                        content: "";
+                        position: absolute;
+                        height: 2px;
+                        width: 80%;
+                        bottom: 0;
+                        left: 10%;
+                        background-color: var(--primary-color-2);
+                    }
+                }
+            }
+        }
     }
 }
 .marcas{
@@ -32,6 +50,16 @@ footer{
                 color: var(--info-color);
                 a{
                     color: var(--info-color);
+                }
+            }
+        }
+    }
+    &.color{
+        li{
+            &.active{
+                color: var(--primary-color-2);
+                a{
+                    color: var(--primary-color-2);
                 }
             }
         }
@@ -92,6 +120,29 @@ footer{
         }
     }
 }
+.bg-primary-o{
+    background-color: rgba(#f4f4f4, .85);
+    transition: all .3s;
+    *{
+        transition: all .3s;
+    }
+    &.active, &:hover{
+        background-color: rgba(#c9d300, .85);
+        &:after{
+            opacity: 0;
+        }
+        *{
+            color: white!important;
+        }
+    }
+}
+.bg-color{
+    background: url(../img/baner/background02.svg);
+    background-repeat: no-repeat;
+    background-position: center;
+    background-size: 100% auto;
+    z-index: -1;
+}
 .bg-d-1{
     background: linear-gradient(to right, #005DB8,#5C9589);
 }
@@ -109,4 +160,9 @@ footer{
 }
 .bg-d-6{
     background: linear-gradient(to right, #005DB8,#7bc440);
+}
+
+.border-primary{
+    border-top: 4px solid var(--primary-color-2)!important;
+    border-bottom: 4px solid var(--primary-color-2)!important;
 }

@@ -4,7 +4,7 @@
     text-align: center;
     display: table-cell;
     vertical-align: middle;
-    background-color: white;
+    background-color: transparent;
     &.danger{
         .rail{
             stroke: var(--danger-color);

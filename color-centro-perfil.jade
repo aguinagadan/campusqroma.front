@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+html(lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        title Document
+        link(rel="stylesheet",href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css",integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm",crossorigin="anonymous")
+        link(rel="stylesheet", href="css/_base.css")
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        
+    body
+        #app
+            header
+                .logo
+                    img.w70(src="./img/logo-colorcentro.svg", alt="logo qroma")
+                .options.gotham-medium.justify-content-end
+                    .menu.menu-color
+                        a(href="#").item HOME
+                        a(href="#").item CATÁLOGO
+                        a(href="#").item.active DASHBOARD
+                        a(href="#").item TIENDA
+                        a(href="#").item QROMATECA
+                    .actions
+                        a(href="#").item.flex
+                            img(src="./img/icons/user-2.svg", alt="")
+                            span.text-tercery LOGIN
+            .profile.bg-color.color
+                .w70.m0auto.p60-50.flex
+                    .photo.radius-50
+                        img(src="./img/perfil.jpg", alt="", srcset="")
+                    h2.text-white JOHN DOE ADMIN
+                    .point
+                        .content.bg-white
+                            .points.radius-50
+                                img(src="./img/icons/point-a.svg", alt="")
+                            span.text-info-2.gotham-medium 123 PUNTOS
+            .mis-cursos-2.w70.m0auto.p60-50.color
+                .header.flex.tabs-2
+                    .item.active
+                        .icon(style="background: url(./img/icons/cursos-o.svg)")
+                        .title Mis cursos
+                    .item
+                        .icon(style="background: url(./img/icons/edit.svg)")
+                        .title Editar perfil
+                    .item
+                        .icon(style="background: url(./img/icons/config.svg)")
+                        .title Ajustes
+                .body
+                    - var n = 0;
+                    while n < 10
+                        .item
+                            .left
+                                .photo
+                                    .img(style="background:url(./img/cursos.jpg)")
+                                .content
+                                    span.bold Nombre completo del primer curso de prueba
+                                    .calendar
+                                        img(src="./img/icons/calendar-2.svg", alt="", srcset="")
+                                        .text
+                                            span Fecha de inicio:
+                                            span Miercoles, 15 de Abril, 2020
+                            .right
+                                .progress
+                                    .container-progress.danger
+                                        .gauge-container
+                                            svg.gauge(viewBox="0 0 150 150")
+                                                circle.progress(r="67", data-target="84", cx="75" cy="75")
+                                                circle.rail(r="67", data-target="84", cx="75" cy="75")
+                                            span.center.percentage
+                                                span.value 0
+                                                span.percentSymbol %
+                        - n++;
+            footer.color
+                .w70
+                    .menus.w75
+                        .site-map.w33
+                            h3 MAPA DEL AULA VIRTUAL
+                            ul
+                                li
+                                    a(href="#") HOME
+                                li
+                                    a(href="#") CATÁLOGO
+                                li
+                                    a(href="#") QROMOTECA
+                                li
+                                    a(href="#") TIENDA
+                        .site-map.w33
+                            h3 MI PERFIL
+                            ul
+                                li.active
+                                    a(href="#") MI DASHBOARD
+                                li
+                                    a(href="#") MIS CURSOS
+                                li
+                                    a(href="#") ¿AYUDA?
+                    .redes.w25
+                        h3 SIGUENOS EN LAS REDES
+                        .list
+                            .item.active
+                                img(src="./img/icons/facebook.svg", alt="")
+                            .item
+                                img(src="./img/icons/youtube.svg", alt="")
+                            .item
+                                img(src="./img/icons/linkeding.svg", alt="")
+                .copy QROMA 2020 © TODOS LOS DERECOS RESERVADOS

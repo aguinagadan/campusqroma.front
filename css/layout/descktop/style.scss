@@ -201,6 +201,18 @@ footer{
         font-size: 12px;
         padding: 18px;
     }
+    &.color{
+        .redes{
+            .list{
+                .item{
+                    background-color: #a1aeb7;
+                    &.active{
+                        background-color: var(--primary-color);
+                    }
+                }
+            }
+        }
+    }
 }
 .category-menu{
     .active{
@@ -255,6 +267,16 @@ footer{
                     // text-decoration: underline;
                     border-bottom: 1px solid white;
                     padding-bottom: 3px;   
+                }
+            }
+            &.color{
+                a{
+                    color: var(--tercery-color);
+                    &.active{
+                        background-color: var(--primary-color-2);
+                        padding: 5px 10px;
+                        color: white;
+                    }
                 }
             }
         }
@@ -432,6 +454,35 @@ footer{
             ::placeholder {
                 color: var(--info-color)!important;
                 opacity: 1;
+            }
+        }
+    }
+    &.color{
+        // background: red;
+        .flex{
+            flex-direction: column;
+            align-items: center;
+            .photo{
+                height: 70px;
+                width: 70px;
+                border: 5px white solid;
+                img{
+                    height: 100%;
+                }
+            }
+            .point{
+                .content{
+                    border-radius: 17px !important;
+                    padding-right: 15px;
+                    padding-left: 45px;
+                    .points{
+                        border: none;
+                        background: none;
+                        height: 40px;
+                        left: 7px;
+                        top: -3px;
+                    }
+                }
             }
         }
     }
@@ -700,6 +751,17 @@ footer{
                 }
             }
         }
+        &.color{
+            .content{
+                .valoration{
+                    span{
+                        &.num{
+                            color: var(--info-color-2);
+                        }
+                    }
+                }
+            }
+        }
     }
 }
 .mis-cursos-2{
@@ -766,6 +828,7 @@ footer{
             .left{
                 display: flex;
                 width: 70%;
+                align-items: center;
                 .photo{
                     height: 100px;
                     width: 130px;
@@ -782,7 +845,26 @@ footer{
                     padding: 15px;
                     span, a{
                         display: block;
-                        font-size: 14px;
+                    }
+                    span{
+                        font-size: 16px;
+                        font-weight: 500;
+                    }
+                    a{
+                        font-size: 12px;
+                    }
+                    .calendar{
+                        display: flex;
+                        img{
+                            height: 20px;
+                            margin-right: 10px;
+                        }
+                        .text{
+                            display: flex;
+                            span{
+                                font-size: 12px;
+                            }
+                        }
                     }
                 }
             }
@@ -802,6 +884,26 @@ footer{
                         span{
                             font-size: 12px;
                         }
+                    }
+                }
+                .progress{
+                    background: transparent;
+                    height: 80px;
+                    width: 100px;
+                    justify-content: flex-end;
+                }
+            }
+        }
+    }
+    &.color{
+        .header{
+            // background: red;
+            &.tabs-2{
+
+                border-bottom: 4px solid var(--primary-color)!important;
+                .item{
+                    &.active{
+                        background: var(--primary-color);
                     }
                 }
             }
@@ -875,4 +977,7 @@ footer{
             }
         }
     }
+}
+.bold{
+    font-weight: 500;
 }

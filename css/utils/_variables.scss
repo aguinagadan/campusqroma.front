@@ -2,7 +2,9 @@
     // --primary-color: #f4f4f4;
     --secondary-color: #f4f4f4;
     --tercery-color: #535353;
+    --cuart-color: #858585;
     --primary-color: #aec939;
+    --primary-color-2:#c9d300;
     --orange-color: #f7a022;
     
     --infoL:39%;
@@ -11,6 +13,11 @@
     --info: 210, 85%;
     --info-color: hsl(var(--info),var(--infoL));
     --info-color-darken: hsl(var(--info),calc(var(--infoL) - 10%));
+
+    --infoL2: 41%;
+    --info-2: 196, 100%;
+    --info-color-2: hsl(var(--info-2),var(--infoL2));
+    --info-color-darken-2: hsl(var(--info-2),calc(var(--infoL2) - 10%));
 
     // --success-color: hsl(103, 49%, 52%);
     --successL: 52%;
