@@ -5,7 +5,7 @@ var app = new Vue({
       menu: false,
     }                 
     },
-    methods: {
+    method: {
       menu: function(obj){
         if(this.menu == false){
           this.menu = true;

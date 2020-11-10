@@ -78,7 +78,7 @@ header{
         }
     }
     .after,.before{
-        background-image: url('../../../img/icons/arrow.svg');
+        background-image: url('../img/icons/arrow.svg');
         background-repeat: no-repeat;
         height: 45px;
         width: 45px;
@@ -123,7 +123,9 @@ header{
         margin-bottom: 35px;
     }
     .after,.before{
-        background-image: url('../../../img/icons/play.svg');
+        background: var(--info-color);
+        background-image: url('../img/icons/play-2.svg');
+        border-radius: 50%;
         height: 32px;
         width: 32px;
         position: absolute;
