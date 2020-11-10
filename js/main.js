@@ -1,6 +1,6 @@
 var app = new Vue({
     el: '#app',
-    data: (){return{
+    data(){return{
       title: 'Hello Vue!',
       menu: false,
     }                 
