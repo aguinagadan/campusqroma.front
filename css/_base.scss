@@ -11,3 +11,10 @@
 // layout
 @import 'layout/descktop/style';
 @import 'utils/mokup';
+
+// tabled
+
+// movil
+@media (max-width: 480px){
+    @import 'layout/movil/movile.scss';
+}

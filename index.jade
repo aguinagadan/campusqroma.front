@@ -14,7 +14,7 @@ html(lang="en")
                 .logo
                     img(src="./img/logo-qroma.svg", alt="logo qroma")
                 .options
-                    .menu
+                    .menu(v-if="menu")
                         a(href="#").item.active HOME
                         a(href="#").item CATÁLOGO DE CURSOS
                         a(href="#").item MIS CURSOS
@@ -22,17 +22,19 @@ html(lang="en")
                         a(href="#").item.flex
                             img(src="./img/icons/user.svg", alt="")
                             span LOGIN
+                .btn-menu(@click="menu(this)")
+                    img(src="./img/icons/menu.svg", alt="")
             .baner
                 .before
                 .item
                     img(src="./img/baner/background01.jpg", alt="", srcset="")
                     .content
-                        .title.bg-info.text-white Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                        .title.bg-info-o.text-white Lorem ipsum dolor sit amet consectetur adipisicing elit.
                         .btn.btn-success Acceder
                 .after
             .access
                 h2
-                    span.text-primary !Pinta 
+                    span.text-success.pacifig !Pinta 
                     span.text-info tu mejor versión!
                 .widget01.n2
                     .item.bg-primary
@@ -43,12 +45,12 @@ html(lang="en")
                     .item.bg-danger
                         img.icon(src="./img/icons/screen.svg", alt="")
                         .text
-                            .title MIS CURSOS
-                            .subtitle Acumula puntos
+                            .title CATÁLOGO DE CURSOS
+                            .subtitle +100 cursos para ti
             .container-testimonials.w70
                 h2
                     span.text-info Qué dicen 
-                    span.text-primary nuestros alumnos
+                    span.text-success.pacifig nuestros alumnos
                 h3 Nuestros alumnos respaldan nuestra calidad de educativa
                 .testimonials
                     .before

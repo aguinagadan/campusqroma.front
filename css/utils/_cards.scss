@@ -33,7 +33,7 @@
                 transform: rotate(45deg);
                 bottom: -17.5px;
                 margin-left: -17.5px;
-                z-index: 0;
+                z-index: -1;
             }
             &:before{
                 transition: all .3s;

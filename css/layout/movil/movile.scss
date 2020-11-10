@@ -1,0 +1,143 @@
+h2{
+    font-size: 18px;
+    *{
+        font-size: 18px;
+    }
+}
+header {
+    justify-content: space-between;
+    .logo{
+        margin: 0;
+        padding: 10px 0;
+        width: 120px;
+    }
+    .options{
+        justify-content: flex-end;
+        .menu{
+            margin-left: 20px;
+            position: absolute;
+            display: flex;
+            flex-direction: column;
+            background: white;
+            border-radius: 10px;
+            box-shadow: 0 0 3px rgba(0,0,0, .3);
+            top: 70px;
+            right: 20px;
+            width: 80%;
+            margin-left: 0;
+            // display: none;
+            .item{
+                padding: 10px 15px;
+                width: 100%;
+                text-align: left;
+            }
+        }
+    }
+    .btn-menu{
+        height: 20px;
+        margin-left: 5px;
+        img{
+            height: 100%;
+        }
+    }
+}
+.access{
+    h2{
+        padding: 25px 0;
+    }
+}
+
+.widget01 .item .text{
+    margin-left: 10px;
+    .title{
+        font-size: 10px;
+    }
+    .subtitle{
+        font-size: 8px;
+    }
+}
+.widget01.n2 {
+    .item{
+        // width: 60%;
+        &:last-child {
+            margin-left: 10px;
+        }
+    }    
+}
+.widget01 .item .icon {
+    height: 25px;
+}
+.widget01 .item{
+    padding: 10px;
+    height: 60px;
+    white-space: nowrap;
+}
+.baner {
+    height: auto;
+    .before{
+        transform: scale(.5);
+        left: -5px;
+    }
+    .after{
+        transform: rotate(180deg) scale(.5);
+        right: -5px;
+    }
+    .item .content{
+        left: 5%;
+        width: 90%;
+        bottom: 10px;
+        .title{
+            padding: 10px;
+            width: 100%;
+            margin: 0!important;
+            font-size: 16px;
+        }
+        .btn{
+            transform: scale(.8);
+        }
+}
+}
+.container-testimonials{
+    padding: 20px 10px;
+    .card01 .item{
+        width: 100%;
+    }
+    .testimonials{
+        .before{
+            right: -20px;
+        }
+        .after{
+            left: -20px;
+        }
+        .card01{
+            overflow: hidden;
+            .content{
+                height: auto;
+            }
+        }
+    }
+}
+.marcas{
+    overflow: hidden;
+    &.w80{
+        width: 100%;
+    }
+}
+
+footer{
+    .w70{
+        flex-direction: column;
+        padding: 20px 0;
+        .menus{
+            flex-direction: column;
+            width: 100%;
+            .w33{
+                width: 100%;
+            }
+        }
+        .w25{
+            width: 100%;
+            margin-left: 0;
+        }
+    }
+}
