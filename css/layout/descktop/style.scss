@@ -86,16 +86,20 @@ header{
         top: calc(50% - 42px);
         cursor: pointer;
         transition: all .3s;
-        &:hover{
-            opacity: .8;
-            transform: scale(.9);
-        }
     }
     .after{
         right: 22px;
         transform: rotate(180deg);
+        &:hover{
+            opacity: .8;
+            transform: scale(.9) rotate(180deg);
+        }
     }
     .before{
+        &:hover{
+            opacity: .8;
+            transform: scale(.9);
+        }
         left: 22px;
         z-index: 1;
     }
@@ -132,17 +136,22 @@ header{
         top: calc(50% + 16px);
         cursor: pointer;
         transition: all .3s;
-        &:hover{
-            opacity: .8;
-            transform: scale(.9);
-        }
+        
     }
     .after{
         left: 0;
         transform: rotate(180deg);
+        &:hover{
+            opacity: .8;
+            transform: scale(.9) rotate(180deg);
+        }
     }
     .before{
         right: 0;
+        &:hover{
+            opacity: .8;
+            transform: scale(.9);
+        }
     }
 }
 .marcas{
@@ -150,7 +159,7 @@ header{
     justify-content: space-between;
     margin: 0 auto;
     .item{
-        height: 108px;
+        // height: 108px;
         // width: 150px;
         img{
             // width: 80%;
@@ -537,6 +546,8 @@ footer{
             }
         }
     }
+}
+.mis-cursos, .baner-container{
     .actions{
         display: flex;
         justify-content: center;
@@ -545,7 +556,7 @@ footer{
             width: 15px;
             border-radius: 0 50% 50% 50%;
             background-color: #c1c1c1;
-            margin-right: 10px;
+            margin-right: 20px;
             cursor: pointer;
             box-shadow: 0 0 0 0 transparent;
             transition: all .3s;
