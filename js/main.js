@@ -102,5 +102,17 @@ var app = new Vue({
           }
         }, 5000);
       },
+      prevBaner: function(){
+
+      },
+      nextBaner: function(){
+
+      },
+      prevTestimonial: function(){
+
+      },
+      nextTestimonial: function(){
+
+      }
     }
 });

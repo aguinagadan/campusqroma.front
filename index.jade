@@ -26,14 +26,14 @@ html(lang="en")
                     img(src="./img/icons/menu.svg", alt="")
             .baner-container
                 .baner.mb-3
-                    .before(@click="prev()")
+                    .before(@click="prevBaner()")
                     #baner
                         .item(v-for="item in baner")
                             img(:src="item.background", alt="", srcset="")
                             .content
                                 .title.bg-info-o.text-white {{item.title}}
                                 .btn(:class="'btn-'+item.btnStyle") {{item.btn}}
-                    .after(@click="next()")
+                    .after(@click="nextBaner()")
                 .actions
                     a(:href="item.url").item(v-bind:class="{ 'active': banerPoint == index+1 }",v-for="(item, index) in baner")
             .access
@@ -57,7 +57,7 @@ html(lang="en")
                     span.text-success.pacifig nuestros alumnos
                 h3 Nuestros alumnos respaldan nuestra calidad de educativa
                 .testimonials
-                    .before
+                    .before(@click="prevTestimonial()")
                     .card01
                         .item(v-for="item in card")
                             .content
@@ -71,7 +71,7 @@ html(lang="en")
                                 p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Dolor tempore officiis minus magnam amet. Cum minima nostrum beatae doloribus veniam corrupti unde. Pariatur placeat totam tenetur, cum facere iusto deserunt!
                             .profile.b-info
                                 img(src="./img/profile02.jpg", alt="")
-                    .after
+                    .after(@click="nextTestimonial()")
             .marcas.w80
                 #marcas.flex.w-100
                     .item(v-for="item in marcas")
