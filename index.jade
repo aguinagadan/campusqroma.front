@@ -26,16 +26,16 @@ html(lang="en")
                     img(src="./img/icons/menu.svg", alt="")
             .baner-container
                 .baner.mb-3
-                    .before
+                    .before(@click="prev()")
                     #baner
                         .item(v-for="item in baner")
                             img(:src="item.background", alt="", srcset="")
                             .content
                                 .title.bg-info-o.text-white {{item.title}}
                                 .btn(:class="'btn-'+item.btnStyle") {{item.btn}}
-                    .after
+                    .after(@click="next()")
                 .actions
-                    .item(v-bind:class="{ 'active': banerPoint == index+1 }",v-for="(item, index) in baner")
+                    a(:href="item.url").item(v-bind:class="{ 'active': banerPoint == index+1 }",v-for="(item, index) in baner")
             .access
                 h2
                     span.text-success.pacifig !Pinta 
