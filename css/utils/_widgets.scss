@@ -32,7 +32,6 @@
         justify-content: start;
         align-items: center;
         height: 105px;
-        position: relative;
         .icon{
             height: 35px;
         }
@@ -52,7 +51,7 @@
             width: 100%;
             z-index: -1;
             top: 0;
-            background-size: cover!important ;
+            background-size: cover!important;
         }
     }
     &.not-radius{

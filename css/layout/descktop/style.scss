@@ -153,17 +153,25 @@ header{
             transform: scale(.9);
         }
     }
+    .testimonials{
+        padding-top: 15px;
+        width: 100%;
+        overflow: hidden;
+    }
 }
 .marcas{
     display: flex;
     justify-content: space-between;
     margin: 0 auto;
-    .item{
-        // height: 108px;
-        // width: 150px;
-        img{
-            // width: 80%;
-            height: 100%;
+    #marcas{
+        justify-content: space-between;
+        .item{
+            // height: 108px;
+            // width: 150px;
+            img{
+                // width: 80%;
+                height: 100%;
+            }
         }
     }
 }
@@ -230,9 +238,40 @@ footer{
     }
 }
 .category-menu{
-    .active{
-        border-radius: 0;
-        height: 115px;
+    position: relative;
+    .item{
+        overflow: hidden!important;
+        justify-content: flex-end;
+        align-items: center;
+        text-align: center;
+        transition: all .3s;
+        // position: sticky;
+        &:before{
+            content: "";
+            height: 100%;
+            width: 100%;
+            background: transparent;
+            top: 0;
+            left: 0;
+            position: absolute;
+            z-index: -1;
+            transition: all .3;
+        }
+        &.active, &:hover{
+            border-radius: 0;
+            height: 115px;
+            background: transparent!important;
+            mask-image: radial-gradient(circle farthest-side at center, transparent 0%, white 0%);
+            &:before{
+                background: linear-gradient(to right,#005DB8,#5C9589);
+            }
+        }
+        h5{
+            font-size: 1em;
+        }
+        .subtitle{
+            font-size: .8em;
+        }
     }
 }
 .search{
@@ -275,10 +314,12 @@ footer{
                 text-decoration: none;
                 font-size: 14px;
                 margin-left: 1.5em;
+                border-bottom: 1px solid transparent;
+                transition: all .3s;
                 &:first-child{
                     margin-left: 0;
                 }
-                &.active{
+                &.active, &:hover{
                     // text-decoration: underline;
                     border-bottom: 1px solid white;
                     padding-bottom: 3px;   
@@ -309,6 +350,8 @@ footer{
             transition: all .3s;
             transform-origin: center center;
             box-shadow: 0 0 4px 1px rgba(#000000, .1);
+            display: flex;
+            flex-direction: column;
             &:nth-child(4n){
                 margin-right: 0;
             }
@@ -322,9 +365,10 @@ footer{
                 justify-content: center;
                 width: auto;
                 overflow: hidden;
-                img{
-                    height: 120px;
-                    width: auto;
+                .bg-img{
+                    background-size: cover!important;
+                    height: 10vw;
+                    width: 100%;
                 }
             }
             .contry{
@@ -343,8 +387,8 @@ footer{
             .title{
                 font-size: 18px;
                 padding: 10px 15px 0 15px;
-                // height: 200px;
                 line-height: 14px;
+                margin-bottom: 15px;
             }
             .footer{
                 display: flex;
@@ -352,6 +396,7 @@ footer{
                 align-items: center;
                 bottom: 10px;
                 padding: 0 15px;
+                margin-top: auto;
                 .btn{
                     transform: scale(.7);
                     transform-origin: left;
@@ -381,14 +426,25 @@ footer{
             overflow: hidden;
             border-radius: 7px;
             background: white;
+            box-shadow: 0 0 4px 1px rgba(#000000, .1);
+            display: flex;
+            flex-direction: column;
             &:nth-child(4n){
                 margin-right: 0;
             }
+            transition: all .3s;
+            &:hover{
+                transform: scale(1.05);
+                box-shadow: -5px 5px 10px 3px rgba(#000000, .1);
+            }
             .img{
-                height: 125px;
+                height: 10vw;
                 position: relative;
-                >img{
+                .bg-img{
+                    background-size: cover!important;
+                    background-position: center!important;
                     height: 100%;
+                    width: 100%;
                 }
                 .icons{
                     position: absolute;
@@ -406,12 +462,13 @@ footer{
             }
             h3{
                 padding: 0 10px;
-                padding-top: 20px;
+                padding-top: 25px;
                 font-size: 1em;
             }
             .footer{
                 padding-left: 10px;
                 padding-bottom: 15px;
+                margin-top: auto;
                 .like{
                     height: 16px;
                     span{
