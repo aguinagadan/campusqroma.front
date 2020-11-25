@@ -10,11 +10,12 @@
   <body>
     <div id="app">
       <header>
-        <div class="logo"><img class="w70" src="./img/logo-colorcentro.svg" alt="logo qroma"/></div>
+        <div class="logo"><img src="./img/logo-colorcentro.svg" alt="logo qroma"/></div>
         <div class="options gotham-medium">
-          <div class="menu menu-color"><a class="item active" href="#">HOME</a><a class="item" href="#">CATÁLOGO DE CURSOS</a><a class="item" href="#">MIS CURSOS</a></div>
+          <div class="menu menu-color" v-if="menu"><a class="item active" href="#">HOME</a><a class="item" href="#">CATÁLOGO DE CURSOS</a><a class="item" href="#">MIS CURSOS</a></div>
           <div class="actions"><a class="item flex" href="#"><img src="./img/icons/user-2.svg" alt=""/><span class="text-tercery">LOGIN</span></a></div>
         </div>
+        <div class="btn-menu" @click="menuBtn()"><img src="./img/icons/menu.svg" alt=""/></div>
       </header>
       <div class="search bg-color">
         <div class="w70 m0auto p60-50 text-center">
@@ -58,18 +59,20 @@
       </div>
       <div class="border-primary">
         <div class="w70 m0auto p60-50 tabs">
-          <div class="header">
+          <div class="header" id="header-color-tabs">
             <div class="before bg-primary-2 radius-50"><img src="./img/icons/play-2.svg" alt=""/></div>
             <div class="list color"><a class="item active" href="#">TODAS LAS SUBCATEGORIAS</a><a class="item" href="#">SUB CATEGORÍA 01</a><a class="item" href="#">SUB CATEGORÍA 02</a><a class="item" href="#">SUB CATEGORÍA 03</a></div>
             <div class="after bg-primary-2 radius-50"><img src="./img/icons/play-2.svg" alt=""/></div>
           </div>
-          <div class="body">
-            <div class="item">
-              <div class="img"><img src="./img/cursos.jpg" alt="" srcset=""/></div>
-              <div class="contry"><img class="contry-flag" src="./img/pais/peru.jpg" alt="" srcset=""/>
-                <div class="contry-name">PERÚ</div>
+          <div class="body" id="body-color-tabs">
+            <div class="item" v-for="item in cursos">
+              <div class="img">
+                <div class="bg-img" :style="'background-image: url('+item.img+')'"></div>
               </div>
-              <h3 class="title gotham-medium">Titulo del Primer curso</h3>
+              <div class="contry"><img class="contry-flag" src="./img/pais/peru.jpg" alt="" srcset=""/>
+                <div class="contry-name">{{item.pais}}</div>
+              </div>
+              <h3 class="title gotham-medium">{{item.title}}</h3>
               <div class="footer">
                 <div class="btn btn-info">ACCEDER</div>
                 <div class="progress">
@@ -78,67 +81,7 @@
                       <svg class="gauge" viewBox="0 0 150 150">
                         <circle class="progress" r="67" data-target="84" cx="75" cy="75"></circle>
                         <circle class="rail" r="67" data-target="84" cx="75" cy="75"></circle>
-                      </svg><span class="center percentage"><span class="value">0</span><span class="percentSymbol">%</span></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="img"><img src="./img/cursos.jpg" alt="" srcset=""/></div>
-              <div class="contry"><img class="contry-flag" src="./img/pais/peru.jpg" alt="" srcset=""/>
-                <div class="contry-name">PERÚ</div>
-              </div>
-              <h3 class="title gotham-medium">Titulo del Primer curso</h3>
-              <div class="footer">
-                <div class="btn btn-info">ACCEDER</div>
-                <div class="progress">
-                  <div class="container-progress danger">
-                    <div class="gauge-container">
-                      <svg class="gauge" viewBox="0 0 150 150">
-                        <circle class="progress" r="67" data-target="84" cx="75" cy="75"></circle>
-                        <circle class="rail" r="67" data-target="84" cx="75" cy="75"></circle>
-                      </svg><span class="center percentage"><span class="value">0</span><span class="percentSymbol">%</span></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="img"><img src="./img/cursos.jpg" alt="" srcset=""/></div>
-              <div class="contry"><img class="contry-flag" src="./img/pais/peru.jpg" alt="" srcset=""/>
-                <div class="contry-name">PERÚ</div>
-              </div>
-              <h3 class="title gotham-medium">Titulo del Primer curso</h3>
-              <div class="footer">
-                <div class="btn btn-info">ACCEDER</div>
-                <div class="progress">
-                  <div class="container-progress danger">
-                    <div class="gauge-container">
-                      <svg class="gauge" viewBox="0 0 150 150">
-                        <circle class="progress" r="67" data-target="84" cx="75" cy="75"></circle>
-                        <circle class="rail" r="67" data-target="84" cx="75" cy="75"></circle>
-                      </svg><span class="center percentage"><span class="value">0</span><span class="percentSymbol">%</span></span>
-                    </div>
-                  </div>
-                </div>
-              </div>
-            </div>
-            <div class="item">
-              <div class="img"><img src="./img/cursos.jpg" alt="" srcset=""/></div>
-              <div class="contry"><img class="contry-flag" src="./img/pais/peru.jpg" alt="" srcset=""/>
-                <div class="contry-name">PERÚ</div>
-              </div>
-              <h3 class="title gotham-medium">Titulo del Primer curso</h3>
-              <div class="footer">
-                <div class="btn btn-info">ACCEDER</div>
-                <div class="progress">
-                  <div class="container-progress danger">
-                    <div class="gauge-container">
-                      <svg class="gauge" viewBox="0 0 150 150">
-                        <circle class="progress" r="67" data-target="84" cx="75" cy="75"></circle>
-                        <circle class="rail" r="67" data-target="84" cx="75" cy="75"></circle>
-                      </svg><span class="center percentage"><span class="value">0</span><span class="percentSymbol">%</span></span>
+                      </svg><span class="center percentage"><span class="value">{{item.porcent}}</span><span class="percentSymbol">%</span></span>
                     </div>
                   </div>
                 </div>
@@ -204,5 +147,9 @@
         <div class="copy">QROMA 2020 © TODOS LOS DERECOS RESERVADOS</div>
       </footer>
     </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.min.js" integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0=" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js"></script>
+    <script src="./js/color-centro.js">                       </script>
   </body>
 </html>

@@ -3,90 +3,8 @@ var app = new Vue({
     data(){
       return{
         menu: false,
-        cursos: [
-          {
-            img: './img/cursos.jpg',
-            title: 'Titulo del Primer curso',
-            pais: 'PERÚ',
-            flat: './img/pais/peru.jpg',
-            porcent: '0'
-          },
-          {
-            img: './img/cursos.jpg',
-            title: 'Titulo del Primer curso',
-            pais: 'PERÚ',
-            flat: './img/pais/peru.jpg',
-            porcent: '0'
-          },
-          {
-            img: './img/cursos.jpg',
-            title: 'Titulo del Primer curso',
-            pais: 'PERÚ',
-            flat: './img/pais/peru.jpg',
-            porcent: '0'
-          },
-          {
-            img: './img/cursos.jpg',
-            title: 'Titulo del Primer curso',
-            pais: 'PERÚ',
-            flat: './img/pais/peru.jpg',
-            porcent: '0'
-          },
-          {
-            img: './img/cursos.jpg',
-            title: 'Titulo del Primer curso',
-            pais: 'PERÚ',
-            flat: './img/pais/peru.jpg',
-            porcent: '0'
-          },
-          {
-            img: './img/cursos.jpg',
-            title: 'Titulo del Primer curso',
-            pais: 'PERÚ',
-            flat: './img/pais/peru.jpg',
-            porcent: '0'
-          },
-          {
-            img: './img/cursos.jpg',
-            title: 'Titulo del Primer curso',
-            pais: 'PERÚ',
-            flat: './img/pais/peru.jpg',
-            porcent: '0'
-          },
-          {
-            img: './img/cursos.jpg',
-            title: 'Titulo del Primer curso',
-            pais: 'PERÚ',
-            flat: './img/pais/peru.jpg',
-            porcent: '0'
-          },
-        ],
-        subcategory:[
-            {
-                name: 'TODAS LAS SUBCATEGORIAS',
-                status: true,  
-            },
-            {
-                name: 'SUB CATEGORÍA 01',
-                status: false,  
-            },
-            {
-                name: 'SUB CATEGORÍA 02',
-                status: false,  
-            },
-            {
-                name: 'SUB CATEGORÍA 03',
-                status: false,  
-            },
-            // {
-            //   name: 'SUB CATEGORÍA 02',
-            //   status: false,  
-            // },
-            // {
-            //     name: 'SUB CATEGORÍA 03',
-            //     status: false,  
-            // },
-        ],
+        tabActive: 1,
+        aprendizajes: 35,
         desarrollo:[
             {
                 title: "lorem ipsum dolor sit amet.",
@@ -129,8 +47,6 @@ var app = new Vue({
                 img: './img/desarrollo_personal.jpg'
             },
         ],
-        btnBefore: false,
-        btnAfter: false,
       }         
     },
     created(){
@@ -183,6 +99,7 @@ var app = new Vue({
       changeTabs: function(obj){
         console.log(obj);
         console.log($('#tabs-header .item'));
+        this.tabActive = obj;
         $('#tabs-header .item').removeClass('active');
         $('#tabs-header .item:nth-child('+obj+')').addClass('active');
       }

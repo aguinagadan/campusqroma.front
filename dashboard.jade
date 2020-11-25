@@ -12,61 +12,57 @@ html(lang="en")
         #app
             header
                 .logo
-                    img.w70(src="./img/logo-colorcentro.svg", alt="logo qroma")
-                .options.gotham-medium.justify-content-end
-                    .menu.menu-color
-                        a(href="#").item HOME
-                        a(href="#").item CATÁLOGO
-                        a(href="#").item.active DASHBOARD
-                        a(href="#").item TIENDA
-                        a(href="#").item QROMATECA
+                    img(src="./img/logo-qroma.svg", alt="logo qroma")
+                .options.gotham-medium
+                    .menu(v-if="menu")
+                        a(href="#").item.active HOME
+                        a(href="#").item CATÁLOGO DE CURSOS
+                        a(href="#").item MIS CURSOS
                     .actions
                         a(href="#").item.flex
-                            img(src="./img/icons/user-2.svg", alt="")
-                            span.text-tercery LOGIN
+                            img(src="./img/icons/user.svg", alt="")
+                            span LOGIN
+                .btn-menu(@click="menuBtn()")
+                    img(src="./img/icons/menu.svg", alt="")
             .profile.bg-d-2
                 .w70.m0auto.p60-50.flex
                     .photo.radius-50.border-7.mr-4
-                        img(src="./img/perfil.jpg", alt="", srcset="")
+                        img(:src="user.photo", alt="", srcset="")
                     .data
-                        span.text-white Activo desde el 22 de Septiembre, 2020
-                        h2.text-white.mt-2 JOHN DOE ADMIN
+                        span.text-white Activo desde el {{user.dateReg.day}} de {{user.dateReg.mount}}, {{user.dateReg.year}}
+                        h2.text-white.mt-2 {{user.name}} {{user.role}}
                         .point
                             .content.bg-white
                                 .points.radius-50
                                     img(src="./img/icons/points.svg", alt="")
-                                span.text-primary.gotham-medium 123 PUNTOS
+                                span.text-primary.gotham-medium {{user.points}} PUNTOS
             .mis-cursos.w70.m0auto.p60-50
                 h2.mb-4
                     span.text-info.gotham-medium Mis cursos  
                     span.text-success.pacifig pendientes
-                .arrow-left
+                .arrow-left(@click="arrowLeft()", v-bind:class="{'disabled': !btnBefore }")
                     img(src="./img/icons/arrow-success.svg", alt="", srcset="")
                 .tabs
                     .body
-                        - var n = 0;
-                        while n < 4
-                            .item
-                                .img
-                                    img(src="./img/cursos.jpg", alt="", srcset="")
-                                .contry
-                                    img.contry-flag(src="./img/pais/peru.jpg", alt="", srcset="")
-                                    .contry-name PERÚ
-                                h3.title.gotham-medium Titulo del Primer curso
-                                .footer
-                                    .btn.btn-info ACCEDER
-                                    .progress
-                                        .container-progress.danger
-                                            .gauge-container
-                                                svg.gauge(viewBox="0 0 150 150")
-                                                    circle.progress(r="67", data-target="84", cx="75" cy="75")
-                                                    circle.rail(r="67", data-target="84", cx="75" cy="75")
-                                                span.center.percentage
-                                                    span.value 0
-                                                    span.percentSymbol %
-
-                            - n++;
-                .arrow-right
+                        .item(v-for="item in cursos")
+                            .img
+                                .bg-img(:style="'background-image: url('+item.img+')'")
+                            .contry
+                                img.contry-flag(:src="item.flat", alt="", srcset="")
+                                .contry-name {{item.pais}}
+                            h3.title.gotham-medium {{item.title}}
+                            .footer
+                                .btn.btn-info ACCEDER
+                                .progress
+                                    .container-progress.danger
+                                        .gauge-container
+                                            svg.gauge(viewBox="0 0 150 150")
+                                                circle.progress(r="67", data-target="84", cx="75" cy="75")
+                                                circle.rail(r="67", data-target="84", cx="75" cy="75")
+                                            span.center.percentage
+                                                span.value {{item.porcent}}
+                                                span.percentSymbol %
+                .arrow-right(@click="arrowRight()", v-bind:class="{'disabled': !btnBefore }")
                     img(src="./img/icons/arrow-success.svg", alt="", srcset="")
                 .actions
                     .item.active
@@ -79,15 +75,16 @@ html(lang="en")
                         img(src="./img/icons/arrow-success.svg", alt="", srcset="")
                     .bar
                         .color
-                        .level
+                            .griss(:style="'width: '+(100-user.progress)+'%'")
+                        .level(v-bind:class="{'active': user.progress < 50 }")
                             .points.radius-50X.bg-info
                                 img(src="./img/icons/points.svg", alt="")
                                 span JUNIOR
-                        .level.active
+                        .level(v-bind:class="{'active': user.progress >= 50 && user.progress < 100}")
                             .points.radius-50X.bg-primary
                                 img(src="./img/icons/points.svg", alt="")
                                 span INTERMEDIO
-                        .level
+                        .level(v-bind:class="{'active': user.progress >= 100 }")
                             .points.radius-50X.bg-danger
                                 img(src="./img/icons/points.svg", alt="")
                                 span AVANZADO
@@ -98,35 +95,32 @@ html(lang="en")
                         .header.bg-info.text-white Ranking por áreas
                         .content
                             table
-                                - var n = 0;
-                                while n < 50
-                                    tr
-                                        td 1
-                                        td Comercial
-                                        td
-                                            img(src="./img/icons/as.svg", alt="", srcset="")
-                                        td 158 puntos
-                                    - n++;
+                                tr(v-for="item in ranking")
+                                    td 1
+                                    td {{item.name}}
+                                    td
+                                        img(src="./img/icons/as.svg", alt="", srcset="")
+                                    td {{item.points}} puntos
                     .progreso
                         .header.bg-info.text-white Mi progreso
                         .content.bg-white
                             .flex
-                                span 254 cursos en el portafolio
+                                span {{user.miProgress.allCurses}} cursos en el portafolio
                                 .progress-bar-h
-                                    .active.bg-success
-                                    span.text-white 250 cursos terminados
+                                    .active.bg-success(:style="'width: '+(user.miProgress.progress)+'%'")
+                                    span.text-white {{user.miProgress.successFullCurses}} cursos terminados
                             .valoration
                                 .item
-                                    span.num 15
+                                    span.num {{user.miProgress.prize}}
                                     span.bg-secondary Premios Canjeados
                                 .item
-                                    span.num 12
+                                    span.num {{user.miProgress.valoration}}
                                     span.bg-secondary Valoraciones
                                 .item
-                                    span.num 6
-                                    span.bg-secondary Aprendizajes conpartidos
+                                    span.num {{user.miProgress.shared}}
+                                    span.bg-secondary Aprendizajes compartidos
                                 .item
-                                    span.num 0
+                                    span.num {{user.miProgress.discution}}
                                     span.bg-secondary Discusiones
             .mis-cursos-2.w70.m0auto.p60-50
                 .header.flex
@@ -146,32 +140,29 @@ html(lang="en")
                                     option Filtrar cursos por categoria
                                 //- label Filtrar cursos por categoria
                 .body
-                    - var n = 0;
-                    while n < 10
-                        .item
-                            .left
-                                .photo
-                                    .img(style="background:url(./img/cursos.jpg)")
-                                .content
-                                    span Nombre completo del primer curso de prueba con dos filas de text para nombres largos
-                                    a.text-success(href="#") ACCEDER >
-                            .right
-                                .calendar
-                                    img(src="./img/icons/calendar.svg", alt="", srcset="")
-                                    .text
-                                        span Terminar el
-                                        br
-                                        span 15 de Abril, 2020
-                                .progress
-                                        .container-progress.danger
-                                            .gauge-container
-                                                svg.gauge(viewBox="0 0 150 150")
-                                                    circle.progress(r="67", data-target="84", cx="75" cy="75")
-                                                    circle.rail(r="67", data-target="84", cx="75" cy="75")
-                                                span.center.percentage
-                                                    span.value 0
-                                                    span.percentSymbol %
-                        - n++;
+                    .item(v-for="item in misCursos")
+                        .left
+                            .photo
+                                .img(:style="'background:url('+item.photo+')'")
+                            .content
+                                span {{item.name}}
+                                a.text-success(:href="item.url") ACCEDER >
+                        .right
+                            .calendar
+                                img(src="./img/icons/calendar.svg", alt="", srcset="")
+                                .text
+                                    span Terminar el
+                                    br
+                                    span {{item.dateEnd.day}} de {{item.dateEnd.mount}}, {{item.dateEnd.year}}
+                            .progress
+                                    .container-progress.danger
+                                        .gauge-container
+                                            svg.gauge(viewBox="0 0 150 150")
+                                                circle.progress(r="67", data-target="84", cx="75" cy="75")
+                                                circle.rail(r="67", data-target="84", cx="75" cy="75")
+                                            span.center.percentage
+                                                span.value 0
+                                                span.percentSymbol %
             footer.bg-secondary
                 .w70
                     .menus.w75
@@ -205,3 +196,10 @@ html(lang="en")
                             .item
                                 img(src="./img/icons/linkeding.svg", alt="")
                 .copy QROMA 2020 © TODOS LOS DERECOS RESERVADOS
+        script(
+            src="https://code.jquery.com/jquery-3.5.1.min.js"
+  integrity="sha256-9/aliU8dGd2tb6OSsuzixeV4y/faTqgFtohetphbbj0="
+  crossorigin="anonymous")
+        script(src="https://cdn.jsdelivr.net/npm/vue@2.5.16/dist/vue.js")
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/axios/0.21.0/axios.min.js")
+        script(src="./js/dashboard.js")

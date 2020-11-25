@@ -3,6 +3,26 @@ var app = new Vue({
     data(){
       return{
         menu: false,
+        user:{
+            name: 'JOHN DOE',
+            role: 'ADMIN',
+            points: 123,
+            progress: 60,
+            dateReg: {
+                day: 22,
+                mount: 'Septiembre',
+                year: 2020
+            },
+            miProgress: {
+                allCurses: 254,
+                successFullCurses: 250,
+                progress: 80,
+                prize: 15,
+                valoration: 12,
+                shared: 6,
+                discution: 0
+            }
+        },
         cursos: [
           {
             img: './img/cursos.jpg',
@@ -31,61 +51,75 @@ var app = new Vue({
             pais: 'PERÚ',
             flat: './img/pais/peru.jpg',
             porcent: '0'
-          },
-          {
-            img: './img/cursos.jpg',
-            title: 'Titulo del Primer curso',
-            pais: 'PERÚ',
-            flat: './img/pais/peru.jpg',
-            porcent: '0'
-          },
-          {
-            img: './img/cursos.jpg',
-            title: 'Titulo del Primer curso',
-            pais: 'PERÚ',
-            flat: './img/pais/peru.jpg',
-            porcent: '0'
-          },
-          {
-            img: './img/cursos.jpg',
-            title: 'Titulo del Primer curso',
-            pais: 'PERÚ',
-            flat: './img/pais/peru.jpg',
-            porcent: '0'
-          },
-          {
-            img: './img/cursos.jpg',
-            title: 'Titulo del Primer curso',
-            pais: 'PERÚ',
-            flat: './img/pais/peru.jpg',
-            porcent: '0'
-          },
+          }
         ],
-        subcategory:[
+        misCursos:[
             {
-                name: 'TODAS LAS SUBCATEGORIAS',
-                status: true,  
+                name: 'Nombre completo del primer curso de prueba con dos filas de text para nombres largos',
+                photo: './img/cursos.jpg',
+                url: '#',
+                porcent: 0,
+                dateEnd: {
+                    day: 15,
+                    mount: "Abril",
+                    year: 2020
+                }
             },
             {
-                name: 'SUB CATEGORÍA 01',
-                status: false,  
+                name: 'Nombre completo del primer curso de prueba con dos filas de text para nombres largos',
+                photo: './img/cursos.jpg',
+                url: '#',
+                porcent: 0,
+                dateEnd: {
+                    day: 15,
+                    mount: "Abril",
+                    year: 2020
+                }
             },
             {
-                name: 'SUB CATEGORÍA 02',
-                status: false,  
+                name: 'Nombre completo del primer curso de prueba con dos filas de text para nombres largos',
+                photo: './img/cursos.jpg',
+                url: '#',
+                porcent: 0,
+                dateEnd: {
+                    day: 15,
+                    mount: "Abril",
+                    year: 2020
+                }
             },
             {
-                name: 'SUB CATEGORÍA 03',
-                status: false,  
+                name: 'Nombre completo del primer curso de prueba con dos filas de text para nombres largos',
+                photo: './img/cursos.jpg',
+                url: '#',
+                porcent: 0,
+                dateEnd: {
+                    day: 15,
+                    mount: "Abril",
+                    year: 2020
+                }
             },
-            // {
-            //   name: 'SUB CATEGORÍA 02',
-            //   status: false,  
-            // },
-            // {
-            //     name: 'SUB CATEGORÍA 03',
-            //     status: false,  
-            // },
+            {
+                name: 'Nombre completo del primer curso de prueba con dos filas de text para nombres largos',
+                photo: './img/cursos.jpg',
+                url: '#',
+                porcent: 0,
+                dateEnd: {
+                    day: 15,
+                    mount: "Abril",
+                    year: 2020
+                }
+            },
+            {
+                name: 'Nombre completo del primer curso de prueba con dos filas de text para nombres largos',
+                photo: './img/cursos.jpg',
+                url: '#',
+                porcent: 0,
+                dateEnd: {
+                    day: 15,
+                    mount: "Abril",
+                    year: 2020
+                }
+            },
         ],
         desarrollo:[
             {
@@ -129,8 +163,32 @@ var app = new Vue({
                 img: './img/desarrollo_personal.jpg'
             },
         ],
-        btnBefore: false,
-        btnAfter: false,
+        producto: [
+            {
+                photo: './img/product.jpg',
+                name: 'Primer Producto',
+                point: 40,
+                url: '#',
+            },
+            {
+                photo: './img/product.jpg',
+                name: 'Primer Producto',
+                point: 40,
+                url: '#',
+            },
+            {
+                photo: './img/product.jpg',
+                name: 'Primer Producto',
+                point: 40,
+                url: '#',
+            },
+            {
+                photo: './img/product.jpg',
+                name: 'Primer Producto',
+                point: 40,
+                url: '#',
+            },
+        ]
       }         
     },
     created(){

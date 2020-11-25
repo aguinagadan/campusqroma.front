@@ -301,14 +301,27 @@ footer{
         margin-top: -15px;
         .before, .after{
             cursor: pointer;
+            transition: all .3s;
             img{
                 height: 30px;
+            }
+            &:hover{
+                opacity: .6;
+            }
+            &.disabled{
+                opacity: .3;
             }
         }
         .before{
             transform: rotate(180deg);
         }
+        #list-tabs{
+            width: calc(100% - 100px);
+            overflow: hidden;
+            margin: 0 auto;
+        }
         .list{
+            display: flex;
             a{
                 color: white;
                 text-decoration: none;
@@ -316,6 +329,7 @@ footer{
                 margin-left: 1.5em;
                 border-bottom: 1px solid transparent;
                 transition: all .3s;
+                white-space: nowrap;
                 &:first-child{
                     margin-left: 0;
                 }
@@ -680,12 +694,10 @@ footer{
             width: 100%;
             overflow: hidden;
             background: linear-gradient(to right,var(--info-color),var(--primary-color),var(--danger-color));
-            &:after{
+            .griss{
                 right: 0;
                 position: absolute;
                 height: 100%;
-                width: 35%;
-                content: "";
                 background: gainsboro;
                 border-radius: (0 , 10px);
             }
@@ -1054,4 +1066,7 @@ footer{
 }
 .bold{
     font-weight: 500;
+}
+#header-color-tabs{
+    overflow: hidden;
 }

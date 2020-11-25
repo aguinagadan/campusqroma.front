@@ -34,20 +34,20 @@
         <h5>Selecciona una categoría y encuentra los cursos disponibles</h5>
       </div>
       <div class="category-menu pw70">
-        <div class="widget01 n4 flex-column">
+        <div class="widget01 n4 flex-column" id="tabs-header">
           <div class="item bg-info active">
-            <h5 class="text-white">Nuestro consumidor</h5>
+            <h5 class="text-white" @click="changeTabs(1)">Nuestro consumidor</h5>
             <div class="subtitle">4 CURSOS</div>
           </div>
-          <div class="item bg-success">
+          <div class="item bg-success" @click="changeTabs(2)">
             <h5 class="text-white">Tu OnBoarding</h5>
             <div class="subtitle">2 CURSOS</div>
           </div>
-          <div class="item bg-warning">
+          <div class="item bg-warning" @click="changeTabs(3)">
             <h5 class="text-white">Seguridad</h5>
             <div class="subtitle">2 CURSOS</div>
           </div>
-          <div class="item bg-danger">
+          <div class="item bg-danger" @click="changeTabs(4)">
             <h5 class="text-white">Cursos de clientes</h5>
             <div class="subtitle">2 CURSOS</div>
           </div>
@@ -56,9 +56,11 @@
       <div class="search bg-d-1">
         <div class="w70 m0auto p60-50 tabs">
           <div class="header">
-            <div class="before"><img src="./img/icons/play.svg" alt=""/></div>
-            <div class="list"><a class="item" href="#" v-for="item in subcategory" :class="{active:item.status}">{{item.name}}</a></div>
-            <div class="after"><img src="./img/icons/play.svg" alt=""/></div>
+            <div class="before" @click="before()" v-bind:class="{'disabled': !btnBefore }"><img src="./img/icons/play.svg" alt=""/></div>
+            <div id="list-tabs">
+              <div class="list"><a class="item" href="#" v-for="item in subcategory" :class="{active:item.status}">{{item.name}}</a></div>
+            </div>
+            <div class="after" @click="before()" v-bind:class="{'disabled': !btnAfter }"><img src="./img/icons/play.svg" alt=""/></div>
           </div>
           <div class="body">
             <div class="item" v-for="item in cursos">

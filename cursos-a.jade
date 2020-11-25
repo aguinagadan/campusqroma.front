@@ -41,27 +41,28 @@ html(lang="en")
                     span.text-success.pacifig disponibles para ti
                 h5 Selecciona una categoría y encuentra los cursos disponibles
             .category-menu.pw70
-                .widget01.n4.flex-column
+                .widget01.n4.flex-column#tabs-header
                     .item.bg-info.active
-                        h5.text-white Nuestro consumidor
+                        h5.text-white(@click="changeTabs(1)") Nuestro consumidor
                         .subtitle 4 CURSOS
-                    .item.bg-success
+                    .item.bg-success(@click="changeTabs(2)")
                         h5.text-white Tu OnBoarding
                         .subtitle 2 CURSOS
-                    .item.bg-warning
+                    .item.bg-warning(@click="changeTabs(3)")
                         h5.text-white Seguridad
                         .subtitle 2 CURSOS
-                    .item.bg-danger
+                    .item.bg-danger(@click="changeTabs(4)")
                         h5.text-white Cursos de clientes
                         .subtitle 2 CURSOS
             .search.bg-d-1
                 .w70.m0auto.p60-50.tabs
                     .header
-                        .before
+                        .before(@click="before()", v-bind:class="{'disabled': !btnBefore }")
                             img(src="./img/icons/play.svg", alt="")
-                        .list
-                            a(href="#").item(v-for="item in subcategory", :class="{active:item.status}") {{item.name}}
-                        .after
+                        #list-tabs
+                            .list
+                                a(href="#").item(v-for="item in subcategory", :class="{active:item.status}") {{item.name}}
+                        .after(@click="before()", v-bind:class="{'disabled': !btnAfter }")
                             img(src="./img/icons/play.svg", alt="")
                     .body
                         .item(v-for="item in cursos")
