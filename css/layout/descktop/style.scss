@@ -322,7 +322,8 @@ footer{
         }
         .list{
             display: flex;
-            a{
+            .item{
+                cursor: pointer;
                 color: white;
                 text-decoration: none;
                 font-size: 14px;
@@ -340,7 +341,7 @@ footer{
                 }
             }
             &.color{
-                a{
+                .item{
                     color: var(--tercery-color);
                     &.active{
                         background-color: var(--primary-color-2);

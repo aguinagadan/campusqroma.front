@@ -57,12 +57,12 @@ html(lang="en")
             .search.bg-d-1
                 .w70.m0auto.p60-50.tabs
                     //- .header
-                        .before(@click="before()", v-bind:class="{'disabled': !btnBefore }")
+                        button.before(@mousedown="before()", @mouseup="beforeCansel()", v-bind:class="{'disabled': !btnBefore }", :disabled="!btnBefore")
                             img(src="./img/icons/play.svg", alt="")
                         #list-tabs
                             .list
-                                a(href="#").item(v-for="item in subcategory", :class="{active:item.status}") {{item.name}}
-                        .after(@click="before()", v-bind:class="{'disabled': !btnAfter }")
+                                .item(@click="subMenu(key)", v-for="(item, key) in subcategory", :class="{active:item.status}") {{item.name}}
+                        button.after(@mousedown="after()", @mouseup="afterCansel()", v-bind:class="{'disabled': !btnAfter }", :disabled="!btnAfter")
                             img(src="./img/icons/play.svg", alt="")
                     .body
                         .item(v-for="item in cursos")

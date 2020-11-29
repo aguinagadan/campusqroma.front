@@ -56,11 +56,13 @@
       <div class="search bg-d-1">
         <div class="w70 m0auto p60-50 tabs">
           <div class="header">
-            <div class="before" @click="before()" v-bind:class="{'disabled': !btnBefore }"><img src="./img/icons/play.svg" alt=""/></div>
+            <button class="before" @mousedown="before()" @mouseup="beforeCansel()" v-bind:class="{'disabled': !btnBefore }" :disabled="!btnBefore"><img src="./img/icons/play.svg" alt=""/></button>
             <div id="list-tabs">
-              <div class="list"><a class="item" href="#" v-for="item in subcategory" :class="{active:item.status}">{{item.name}}</a></div>
+              <div class="list">
+                <div class="item" @click="subMenu(key)" v-for="(item, key) in subcategory" :class="{active:item.status}">{{item.name}}</div>
+              </div>
             </div>
-            <div class="after" @click="before()" v-bind:class="{'disabled': !btnAfter }"><img src="./img/icons/play.svg" alt=""/></div>
+            <button class="after" @mousedown="after()" @mouseup="afterCansel()" v-bind:class="{'disabled': !btnAfter }" :disabled="!btnAfter"><img src="./img/icons/play.svg" alt=""/></button>
           </div>
           <div class="body">
             <div class="item" v-for="item in cursos">

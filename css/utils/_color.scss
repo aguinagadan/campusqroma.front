@@ -5,6 +5,15 @@ body{
 a{
     color: #535353;
 }
+button{
+    border: none;
+    background: transparent;
+    outline: none;
+    &:hover, &:active, &:focus{
+        outline: none;
+        border: 0;
+    }
+}
 header{
     background: white;
     box-shadow: var(--shadow-1);
